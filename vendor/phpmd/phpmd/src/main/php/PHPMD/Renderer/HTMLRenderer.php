@@ -71,7 +71,7 @@ class HTMLRenderer extends AbstractRenderer
         $writer->write(PHP_EOL);
         $writer->write('<table align="center" cellspacing="0" cellpadding="3">');
         $writer->write('<tr>');
-        $writer->write('<th>#</th><th>文件名</th><th>行位置</th><th>问题描述</th>');
+        $writer->write('<th>序号</th><th>文件名</th><th>行位置</th><th>问题描述</th>');
         $writer->write('</tr>');
         $writer->write(PHP_EOL);
     }

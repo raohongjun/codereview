@@ -18,7 +18,7 @@
         <description>
             <![CDATA[
             复杂性由一个方法中的决策点的数量加上一个决定
-            方法条目。 决定点是'如果'，'同时'，'为'和'案例标签'。 通常，
+            方法条目。 决定点是'if', 'while', 'for'和'case labels'。 通常，
             1-4为低复杂度，5-7为中等复杂度，8-10为高复杂度，
               和11+是非常复杂的。
             ]]>
@@ -131,7 +131,7 @@
 
     <rule name="ExcessiveClassLength"
           since="0.1"
-          message="The class {0} 包含 {1} 行代码. 当前阈值是 {2}. 避免很长 classes."
+          message="class {0} 包含 {1} 行代码. 当前阈值是 {2}. 避免很长 classes."
           class="PHPMD\Rule\Design\LongClass"
           externalInfoUrl="http://phpmd.org/rules/codesize.html#excessiveclasslength">
         <description>
@@ -184,7 +184,7 @@
 
     <rule name="公共属性过多"
           since="0.1"
-          message="The {0} {1} 具有 {2}公共方法和属性。 考虑将公共项目的数量减少到小于 {3}."
+          message="{0} {1} 具有 {2}公共方法和属性。 考虑将公共项目的数量减少到小于 {3}."
           class="PHPMD\Rule\ExcessivePublicCount"
           externalInfoUrl="http://phpmd.org/rules/codesize.html#excessivepubliccount">
         <description>
@@ -243,7 +243,7 @@
     <rule name="太多的方法"
           since="0.1"
           class="PHPMD\Rule\Design\TooManyMethods"
-          message="The {0} {1} 具有 {2} 非getter和setter方法. 考虑重构 {1} 以保留 {3} 下的多个方法."
+          message="{0} {1} 具有 {2} 非getter和setter方法. 考虑重构 {1} 以保留 {3} 下的多个方法."
           externalInfoUrl="http://phpmd.org/rules/codesize.html#toomanymethods">
         <description>
             <![CDATA[

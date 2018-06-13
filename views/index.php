@@ -39,6 +39,7 @@ $id=1;
     <?php foreach ($results as $key=>$result){?>
     <div class="boxItem">
     <div class="titItem"><?php echo $key;?></div>
+    <div ><a href="./static/<?php echo $key.'.html' ?>">查看代码报告</a> </div>
     <div id="main<?php echo $id;?>"  style="width: 600px;height:400px;"></div>
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例

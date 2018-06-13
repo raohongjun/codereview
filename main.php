@@ -7,7 +7,8 @@
  */
 
 include __DIR__."/vendor/autoload.php";
-
+#!/usr/bin/env php
+use PHPMD\TextUI\Command;
 $gitdata=[
     "医生患者服务平台"=>"/Users/raohongjun/PhpstormProjects/dpserviceplatform",//医生患者服务平台
     "福瑞医生管理后台"=>"/Users/raohongjun/PhpstormProjects/agAppConsole",//福瑞医生管理后台
@@ -42,9 +43,32 @@ foreach ($gitdata as $k=>$v) {
         "composer"
     ]);
     //拉取更新
-   $a= $git->runCommand( "cd " . $v . '&&  git log  --format=\'%aN\' | sort -u | while read name; do echo -en "$name\t"; git log --author="$name" --pretty=tformat: --numstat | awk \'{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }\' -; done' );
-print_r($a);exit;
+    $git->runCommand( "cd " . $v . "&& git pull" );
+
     $result[$k] = $git->analysis();
+
+    /**
+     *  命令行界面还接受以下可选参数：
+     *  --minimumpriority - 规则优先级阈值; 优先级较低的规则不会被使用。
+     *  --reportfile- 将报告输出发送到指定的文件，而不是默认的输出目标STDOUT。
+     *  --suffixes - 逗号分隔的有效源代码文件扩展名字符串，例如php，phtml。
+     *  --exclude - 逗号分隔的用于忽略目录的模式字符串。
+     *  --strict - 用@SuppressWarnings注释报告这些节点。
+     *  --ignore-violations-on-exit - 即使发现任何违规，也会以零代码退出。
+     */
+
+    $conf=[
+        'php main',
+        $v,
+        'html',
+        'codesize,design,unusedcode',
+        '--reportfile',
+        './views/static/'.$k.'.html',
+        '--exclude',
+        'vendor/,Tests/,oss-sdk-php/,thinkphp/,tests/'
+    ];
+    // 运行命令行界面
+    Command::main($conf);
     echo $k;
 }
 file_put_contents("views/data.php",'<?php return $results ='.var_export( $result ,true).';?>');
