@@ -11,10 +11,6 @@
 use PHPMD\TextUI\Command;
 require_once __DIR__."/vendor/autoload.php";
 
-if (!ini_get('date.timezone')) {
-    date_default_timezone_set('UTC');
-}
-
 // 默认允许尽可能多的内存
 if (extension_loaded('suhosin') && is_numeric(ini_get('suhosin.memory_limit'))) {
     $limit = ini_get('memory_limit');
@@ -29,13 +25,6 @@ if (extension_loaded('suhosin') && is_numeric(ini_get('suhosin.memory_limit'))) 
     ini_set('memory_limit', -1);
 }
 
-// 检查php设置cli参数
-if (!isset($_SERVER['argv']) && !isset($argv)) {
-    fwrite(STDERR, '请启用您的“register_argc_argv”指令 php.ini', PHP_EOL);
-    exit(1);
-} else if (!isset($argv)) {
-    $argv = $_SERVER['argv'];
-}
 
 /**
  *  命令行界面还接受以下可选参数：
@@ -46,7 +35,7 @@ if (!isset($_SERVER['argv']) && !isset($argv)) {
  *  --strict - 用@SuppressWarnings注释报告这些节点。
  *  --ignore-violations-on-exit - 即使发现任何违规，也会以零代码退出。
  */
-$argv=[
+$conf=[
     './phpmd',
     '/Users/raohongjun/PhpstormProjects/dpserviceplatform',
     'html',
@@ -57,4 +46,4 @@ $argv=[
     'vendor/,Tests/,oss-sdk-php/'
 ];
 // 运行命令行界面
-exit(Command::main($argv));
+exit(Command::main($conf));
