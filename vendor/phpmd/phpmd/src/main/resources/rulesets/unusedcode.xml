@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+
+<ruleset name="未使用的代码规则"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+    <description>
+        未使用的代码规则集包含一系列查找未使用代码的规则。
+    </description>
+
+    <rule name="未使用的私有属性"
+          since="0.2"
+          message="避免未使用的私有字段 '{0}'."
+          class="PHPMD\Rule\UnusedPrivateField"
+          externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedprivatefield">
+        <description>
+            检测专用字段何时被声明和/或分配了一个值，但未被使用。
+        </description>
+        <priority>3</priority>
+        <example>
+        <![CDATA[
+            class Something
+            {
+                private static $FOO = 2; // Unused
+                private $i = 5; // Unused
+                private $j = 6;
+                public function addOne()
+                {
+                    return $this->j++;
+                }
+            }
+        ]]>
+        </example>
+    </rule>
+
+    <rule name="未使用的本地变量"
+          since="0.2"
+          message="避免未使用的局部变量，如 '{0}'."
+          class="PHPMD\Rule\UnusedLocalVariable"
+          externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable">
+        <description>
+            检测何时声明和/或分配了局部变量，但未使用。
+        </description>
+        <priority>3</priority>
+        <properties>
+            <property
+                    name="allow-unused-foreach-variables"
+                    description="Allow unused variables in foreach language constructs."
+                    value="false" />
+        </properties>
+        <example>
+        <![CDATA[
+            class Foo {
+                public function doSomething()
+                {
+                    $i = 5; // Unused
+                }
+            }
+        ]]>
+        </example>
+    </rule>
+
+    <rule name="未使用的私有方法"
+          since="0.2"
+          message="避免未使用的私有方法 如 '{0}'."
+          class="PHPMD\Rule\UnusedPrivateMethod"
+          externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedprivatemethod">
+        <description>
+            未使用的私有方法检测私有方法何时被声明但未被使用。
+        </description>
+        <priority>3</priority>
+        <example>
+        <![CDATA[
+            class Something
+            {
+                private function foo() {} // unused
+            }
+        ]]>
+        </example>
+    </rule>
+
+    <rule name="未使用的形式参数"
+          since="0.2"
+          message="避免不使用这些参数 如 '{0}'."
+          class="PHPMD\Rule\UnusedFormalParameter"
+          externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedformalparameter">
+        <description>
+            避免将参数传递给方法或构造函数，然后不使用这些参数。
+        </description>
+        <priority>3</priority>
+        <example>
+        <![CDATA[
+            class Foo
+            {
+                private function bar($howdy)
+                {
+                    // $howdy is not used
+                }
+            }
+        ]]>
+        </example>
+    </rule>
+
+</ruleset>

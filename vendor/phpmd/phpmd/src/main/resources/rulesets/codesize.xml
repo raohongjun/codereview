@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<ruleset name="代码大小规则"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+
+    <description>
+        代码大小规则集包含一组查找代码大小相关问题的规则
+    </description>
+
+    <rule name="循环复杂度"
+          since="0.1"
+          message="{0} {1}() 的循环复杂度为 {2}.  配置的圈复杂度阈值为 {3}."
+          class="PHPMD\Rule\CyclomaticComplexity"
+          externalInfoUrl="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity">
+        <description>
+            <![CDATA[
+            复杂性由一个方法中的决策点的数量加上一个决定
+            方法条目。 决定点是'如果'，'同时'，'为'和'案例标签'。 通常，
+            1-4为低复杂度，5-7为中等复杂度，8-10为高复杂度，
+              和11+是非常复杂的。
+            ]]>
+        </description>
+        <priority>3</priority>
+        <properties>
+            <property name="reportLevel" description="The Cyclomatic Complexity reporting threshold" value="10"/>
+            <property name="showClassesComplexity"
+                      description="Indicate if class average violation should be added to the report"
+                      value="true"/>
+            <property name="showMethodsComplexity"
+                      description="Indicate if class average violation should be added to the report"
+                      value="true"/>
+        </properties>
+        <example>
+            <![CDATA[
+                // Cyclomatic Complexity = 11
+                class Foo {
+                1   public function example() {
+                2       if ($a == $b) {
+                3           if ($a1 == $b1) {
+                                fiddle();
+                4           } elseif ($a2 == $b2) {
+                                fiddle();
+                            } else {
+                                fiddle();
+                            }
+                5       } elseif ($c == $d) {
+                6           while ($c == $d) {
+                                fiddle();
+                            }
+                7        } elseif ($e == $f) {
+                8           for ($n = 0; $n < $h; $n++) {
+                                fiddle();
+                            }
+                        } else {
+                            switch ($z) {
+                9               case 1:
+                                    fiddle();
+                                    break;
+                10              case 2:
+                                    fiddle();
+                                    break;
+                11              case 3:
+                                    fiddle();
+                                    break;
+                                default:
+                                    fiddle();
+                                    break;
+                            }
+                        }
+                    }
+                }
+            ]]>
+        </example>
+    </rule>
+
+
+    <rule name="NPath的复杂性"
+          since="0.1"
+          message="{0} {1}()的NPath复杂度为 {2}. 配置的NPath复杂度阈值为{3}."
+          class="PHPMD\Rule\Design\NpathComplexity"
+          externalInfoUrl="http://phpmd.org/rules/codesize.html#npathcomplexity">
+        <description>
+            方法的NPath复杂度是通过该方法的非循环执行路径的数量。
+            通常认为200的阈值是应采取措施降低复杂性的关键。
+        </description>
+        <priority>3</priority>
+        <properties>
+            <property name="minimum" description="The npath reporting threshold" value="200"/>
+        </properties>
+        <example>
+            <![CDATA[
+                class Foo {
+                    function bar() {
+                        // lots of complicated code
+                    }
+                }
+            ]]>
+        </example>
+    </rule>
+
+
+    <rule name="方法长度"
+          since="0.1"
+          message="{0} {1}() 包含 {2} 行代码. 当前阈值设置为 {3}. 避免真正长的方法."
+          class="PHPMD\Rule\Design\LongMethod"
+          externalInfoUrl="http://phpmd.org/rules/codesize.html#excessivemethodlength">
+        <description>
+            Violations of this rule usually indicate that the method is doing
+            too much. Try to reduce the method size by creating helper methods and removing any copy/pasted code.
+        </description>
+        <priority>3</priority>
+        <properties>
+            <property name="minimum" description="The method size reporting threshold" value="100"/>
+            <property name="ignore-whitespace" description="Count whitespace in reporting threshold" value="false"/>
+        </properties>
+        <example>
+            <![CDATA[
+                class Foo {
+                    public function doSomething() {
+                        print("Hello world!" . PHP_EOL);
+                        print("Hello world!" . PHP_EOL);
+                        // 98 copies omitted for brevity.
+                    }
+                }
+            ]]>
+        </example>
+    </rule>
+
+    <rule name="ExcessiveClassLength"
+          since="0.1"
+          message="The class {0} 包含 {1} 行代码. 当前阈值是 {2}. 避免很长 classes."
+          class="PHPMD\Rule\Design\LongClass"
+          externalInfoUrl="http://phpmd.org/rules/codesize.html#excessiveclasslength">
+        <description>
+            长类文件是该类可能正在尝试的指示
+            做太多了。 尝试将其分解，并将其缩小到某种程度
+            管理。
+        </description>
+        <priority>3</priority>
+        <properties>
+            <property name="minimum" description="The class size reporting threshold" value="1000"/>
+            <property name="ignore-whitespace" description="Count whitespace in reporting threshold" value="false"/>
+        </properties>
+        <example>
+            <![CDATA[
+                class Foo {
+                  public function bar() {
+                    // 1000 lines of code
+                  }
+                }
+            ]]>
+        </example>
+    </rule>
+
+
+    <rule name="过多的参数列表"
+          since="0.1"
+          message="{0} {1} 具有 {2} 个参数. 考虑将参数数量减少到小于 {3}."
+          class="PHPMD\Rule\Design\LongParameterList"
+          externalInfoUrl="http://phpmd.org/rules/codesize.html#excessiveparameterlist">
+        <description>
+            长参数列表可以指示应该创建一个新对象
+            包裹众多参数。 基本上，尝试将参数组合在一起。
+        </description>
+        <priority>3</priority>
+        <properties>
+            <property name="minimum" description="The parameter count reporting threshold" value="10"/>
+        </properties>
+        <example>
+            <![CDATA[
+                class Foo {
+                    public function addData(
+                        $p0, $p1, $p2, $p3, $p4, $p5,
+                        $p5, $p6, $p7, $p8, $p9, $p10) {
+                    }
+                }
+            ]]>
+        </example>
+
+    </rule>
+
+    <rule name="公共属性过多"
+          since="0.1"
+          message="The {0} {1} 具有 {2}公共方法和属性。 考虑将公共项目的数量减少到小于 {3}."
+          class="PHPMD\Rule\ExcessivePublicCount"
+          externalInfoUrl="http://phpmd.org/rules/codesize.html#excessivepubliccount">
+        <description>
+            类中声明的大量公共方法和属性可以指示
+            由于需要付出更多努力，课程可能需要分解
+            彻底测试它。
+        </description>
+        <priority>3</priority>
+        <properties>
+            <property name="minimum" description="The public item reporting threshold" value="45"/>
+        </properties>
+        <example>
+            <![CDATA[
+                public class Foo {
+                    public $value;
+                    public $something;
+                    public $var;
+                    // [... more more public attributes ...]
+
+                    public function doWork() {}
+                    public function doMoreWork() {}
+                    public function doWorkAgain() {}
+                    // [... more more public methods ...]
+                }
+            ]]>
+        </example>
+    </rule>
+
+    <rule name="太多的字段"
+          since="0.1"
+          message="{0} {1} 有 {2} 个字段. 考虑重新设计 {1} 以保留 {3} 下的字段数量."
+          class="PHPMD\Rule\Design\TooManyFields"
+          externalInfoUrl="http://phpmd.org/rules/codesize.html#toomanyfields">
+        <description>
+            具有太多字段的类可以重新设计以具有更少的字段，
+            可能通过一些信息的嵌套对象分组。 对于
+            例如，具有城市/州/邮政区的类可以改为具有一个地址
+            领域。
+        </description>
+        <priority>3</priority>
+        <properties>
+            <property name="maxfields" description="The field count reporting threshold " value="15"/>
+        </properties>
+        <example>
+            <![CDATA[
+                class Person {
+                   protected $one;
+                   private $two;
+                   private $three;
+                   [... many more fields ...]
+                }
+            ]]>
+        </example>
+    </rule>
+
+    <rule name="太多的方法"
+          since="0.1"
+          class="PHPMD\Rule\Design\TooManyMethods"
+          message="The {0} {1} 具有 {2} 非getter和setter方法. 考虑重构 {1} 以保留 {3} 下的多个方法."
+          externalInfoUrl="http://phpmd.org/rules/codesize.html#toomanymethods">
+        <description>
+            <![CDATA[
+                一个有太多方法的类可能是重构的一个很好的嫌疑犯，
+                为了减少其复杂性并找到一种方法来获得更细粒度的对象。
+                默认情况下，它忽略以'get'或'set'开头的方法。
+                PHPMD 2.3中的默认值从10更改为25。
+            ]]>
+        </description>
+        <priority>3</priority>
+        <properties>
+            <property name="maxmethods" description="当前规则设置的阈值" value="25"/>
+            <property name="ignorepattern" description="Ignore methods matching this regex" value="(^(set|get))i"/>
+        </properties>
+    </rule>
+
+    <rule name="太多的公共方法"
+          since="0.1"
+          class="PHPMD\Rule\Design\TooManyPublicMethods"
+          message="{0} {1} 具有 {2} 公共方法. 考虑重构 {1} 以保留 {3} 下的公共方法数量."
+          externalInfoUrl="http://phpmd.org/rules/codesize.html#toomanypublicmethods">
+        <description>
+            <![CDATA[
+                一个拥有太多公共方法的类可能是重构的好怀疑者，
+                为了减少其复杂性并找到一种方法来获得更细粒度的对象。
+
+                默认情况下，它忽略以'get'或'set'开头的方法。
+            ]]>
+        </description>
+        <priority>3</priority>
+        <properties>
+            <property name="maxmethods" description="当前规则设置的阈值" value="10"/>
+            <property name="ignorepattern" description="忽略匹配这个正则表达式的方法" value="(^(set|get))i"/>
+        </properties>
+    </rule>
+
+    <rule name="过度的类复杂性"
+          since="0.2.5"
+          class="PHPMD\Rule\Design\WeightedMethodCount"
+          message="class {0} 的整体复杂度非常高 {1} 配置的复杂度阈值为 {2}."
+          externalInfoUrl="http://phpmd.org/rules/codesize.html#excessiveclasscomplexity">
+        <description>
+            <![CDATA[
+            一个班级的加权方法计数（WMC）是多少时间的一个很好的指标
+            并且需要努力修改和维护这个类。 WMC指标已定义
+            作为一个类中声明的所有方法的复杂性的总和。 大批
+            方法也意味着这个类对派生类有更大的潜在影响。
+            ]]>
+        </description>
+        <priority>3</priority>
+        <properties>
+            <property name="maximum" description="The maximum WMC tolerable for a class." value="50"/>
+        </properties>
+        <example>
+            <![CDATA[
+                class Foo {
+                    public function bar() {
+                        if ($a == $b)  {
+                            if ($a1 == $b1) {
+                                fiddle();
+                            } elseif ($a2 == $b2) {
+                                fiddle();
+                            } else {
+                            }
+                        }
+                    }
+                    public function baz() {
+                        if ($a == $b) {
+                            if ($a1 == $b1) {
+                                fiddle();
+                            } elseif ($a2 == $b2) {
+                                fiddle();
+                            } else {
+                            }
+                        }
+                    }
+                    // Several other complex methods
+                }
+            ]]>
+        </example>
+    </rule>
+</ruleset>

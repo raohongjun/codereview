@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="命名规则"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+    <description>
+        命名规则集包含一系列关于名称的规则 - 太长，太短，等等。
+    </description>
+
+    <rule name="短变量"
+          since="0.2"
+          message="Avoid variables with short names like {0}. Configured minimum length is {1}."
+          class="PHPMD\Rule\Naming\ShortVariable"
+          externalInfoUrl="http://phpmd.org/rules/naming.html#shortvariable">
+        <description>
+Detects when a field, local, or parameter has a very short name.
+        </description>
+        <priority>3</priority>
+        <properties>
+            <property name="minimum" description="Minimum length for a variable, property or parameter name" value="3"/>
+            <property name="exceptions" description="Comma-separated list of exceptions" value=""/>
+        </properties>
+        <example>
+            <![CDATA[
+                class Something {
+                    private $q = 15; // VIOLATION - Field
+                    public static function main( array $as ) { // VIOLATION - Formal
+                        $r = 20 + $this->q; // VIOLATION - Local
+                        for (int $i = 0; $i < 10; $i++) { // Not a Violation (inside FOR)
+                            $r += $this->q;
+                        }
+                    }
+                }
+            ]]>
+        </example>
+    </rule>
+
+    <rule name="长变量"
+          since="0.2"
+          message="避免使用过长的变量名称，例如 {0}. 保留 {1} 下的变量名称长度."
+          class="PHPMD\Rule\Naming\LongVariable"
+          externalInfoUrl="http://phpmd.org/rules/naming.html#longvariable">
+        <description>
+            检测字段，形式或局部变量是否用长名称声明。
+        </description>
+        <priority>3</priority>
+        <properties>
+            <property name="maximum" description="The variable length reporting threshold" value="20"/>
+        </properties>
+        <example>
+            <![CDATA[
+                class Something {
+                    protected $reallyLongIntName = -3; // VIOLATION - Field
+                    public static function main( array $argumentsList[] ) { // VIOLATION - Formal
+                        $otherReallyLongName = -5; // VIOLATION - Local
+                        for ($interestingIntIndex = 0; // VIOLATION - For
+                             $interestingIntIndex < 10;
+                             $interestingIntIndex++ ) {
+                        }
+                    }
+                }
+            ]]>
+        </example>
+    </rule>
+
+    <rule name="短方法名称"
+          since="0.2"
+          message="避免使用诸如 {0}::{1}()之类的简短方法名称。 配置的最小方法名称长度为 {2}."
+          class="PHPMD\Rule\Naming\ShortMethodName"
+          externalInfoUrl="http://phpmd.org/rules/naming.html#shortmethodname">
+        <description>
+            检测何时使用非常短的方法名称。
+        </description>
+        <priority>3</priority>
+        <properties>
+            <property name="minimum" description="Minimum length for a method or function name" value="3"/>
+            <property name="exceptions" description="Comma-separated list of exceptions" value=""/>
+        </properties>
+        <example>
+            <![CDATA[
+                class ShortMethod {
+                    public function a( $index ) { // Violation
+                    }
+                }
+            ]]>
+        </example>
+    </rule>
+
+    <rule name="名称为EnclosingClass的构造函数"
+          since="0.2"
+          message="类不应该具有与类相同名称的构造方法"
+          class="PHPMD\Rule\Naming\ConstructorWithNameAsEnclosingClass"
+          externalInfoUrl="http://phpmd.org/rules/naming.html#constructorwithnameasenclosingclass">
+        <description>
+            考虑一下构造函数方法不应该与封闭类具有相同的名称
+            使用PHP 5 __construct方法。
+        </description>
+        <priority>3</priority>
+        <example>
+            <![CDATA[
+                class MyClass {
+                     // this is bad because it is PHP 4 style
+                    public function MyClass() {}
+                    // this is good because it is a PHP 5 constructor
+                    public function __construct() {}
+                }
+            ]]>
+        </example>
+    </rule>
+
+    <rule name="常量命名约定"
+          since="0.2"
+          message="常量 {0} 应该用大写字母来定义"
+          class="PHPMD\Rule\Naming\ConstantNamingConventions"
+          externalInfoUrl="http://phpmd.org/rules/naming.html#constantnamingconventions">
+        <description>
+            类/接口常量名称应始终用大写字母来定义。
+        </description>
+        <priority>4</priority>
+        <properties />
+        <example>
+            <![CDATA[
+                class Foo {
+                    const MY_NUM = 0; // ok
+                    const myTest = ""; // fail
+                }
+            ]]>
+        </example>
+    </rule>
+
+    <rule name="布尔获取方法名称"
+          since="0.2"
+          message="返回布尔值的 '{0}()' 方法应该被命名为 'is...()' or 'has...()'"
+          class="PHPMD\Rule\Naming\BooleanGetMethodName"
+          externalInfoUrl="http://phpmd.org/rules/naming.html#booleangetmethodname">
+        <description>
+            查找名为'getX（）'的方法，将'boolean'作为返回类型。 公约
+            是命名这些方法'isX（）'或'hasX（）'。
+        </description>
+        <priority>4</priority>
+        <properties>
+            <property name="checkParameterizedMethods" value="false" description="Applies only to methods without parameter when set to true" />
+        </properties>
+        <example>
+            <![CDATA[
+                class Foo {
+                    /**
+                     * @return boolean
+                     */
+                    public function getFoo() {} // bad
+                    /**
+                     * @return bool
+                     */
+                    public function isFoo(); // ok
+                    /**
+                     * @return boolean
+                     */
+                    public function getFoo($bar); // ok, unless checkParameterizedMethods=true
+                }
+            ]]>
+        </example>
+    </rule>
+
+</ruleset>

@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+
+<ruleset name="清理代码规则"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+
+    <description>
+        Clean Code规则集包含强制执行干净代码库的规则。 这包括来自SOLID和对象操作的规则。
+    </description>
+
+    <rule name="布尔参数标志"
+          since="1.4.0"
+          message="方法{0} 具有布尔标志参数 {1}, 这是违反单责任原则的特定符号."
+          class="PHPMD\Rule\CleanCode\BooleanArgumentFlag"
+          externalInfoUrl="http://phpmd.org/rules/cleancode.html#booleanargumentflag">
+        <description>
+            <![CDATA[
+            一个布尔标志参数是一个违反的可靠指标
+            单一责任原则（SRP）。 你可以解决这个问题
+            通过将布尔标志中的逻辑提取到它自己的类中
+            或方法。
+            ]]>
+        </description>
+        <priority>1</priority>
+        <properties />
+        <example>
+            <![CDATA[
+                class Foo {
+                    public function bar($flag = true) {
+                    }
+                }
+            ]]>
+        </example>
+    </rule>
+
+    <rule name="else表达式"
+          since="1.4.0"
+          message="方法 {0} 使用else表达式. 否则就没有必要，你可以简化代码而无需其他工作"
+          class="PHPMD\Rule\CleanCode\ElseExpression"
+          externalInfoUrl="http://phpmd.org/rules/cleancode.html#elseexpression">
+        <description>
+            <![CDATA[
+                带有else分支的if表达式是不必要的。 你可以重写
+                条件以其他方式不必要，代码变得更简单
+                读书。 为了实现这个使用早期返回语句。 为了实现这一点，你可以
+                需要将代码拆分成几个更小的方法。 非常简单的作业
+                你也可以使用三元操作。
+            ]]>
+        </description>
+        <priority>1</priority>
+        <properties></properties>
+        <example>
+            <![CDATA[
+                class Foo
+                {
+                    public function bar($flag)
+                    {
+                        if ($flag) {
+                            // one branch
+                        } else {
+                            // another branch
+                        }
+                    }
+                }
+            ]]>
+        </example>
+    </rule>
+
+    <rule name="静态访问"
+          since="1.4.0"
+          message="对类'{0}' 静态访问  避免在方法 '{1}'."
+          class="PHPMD\Rule\CleanCode\StaticAccess"
+          externalInfoUrl="http://phpmd.org/rules/cleancode.html#staticaccess">
+        <description>
+            <![CDATA[
+                静态访问会导致对其他类不可更改的依赖关系，并导致难以测试代码。 避免
+                不惜一切代价静态访问，而是通过构造函数注入依赖关系。 唯一的
+                当静态访问是可接受的情况下用于工厂方法。
+            ]]>
+        </description>
+        <priority>1</priority>
+        <properties>
+            <property name="exceptions" description="Comma-separated class name list of exceptions" value=""/>
+        </properties>
+        <example>
+            <![CDATA[
+                class Foo
+                {
+                    public function bar()
+                    {
+                        Bar::baz();
+                    }
+                }
+            ]]>
+        </example>
+    </rule>
+</ruleset>

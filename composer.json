@@ -1,0 +1,21 @@
+{
+  "name": "codereviewe",
+  "type": "library",
+  "description": "php git count",
+  "keywords": [
+    "php",
+    "git"
+  ],
+  "license": "MIT",
+  "require": {
+    "phpmd/phpmd": "^2.6"
+  },
+  "require-dev": {
+    "phpmd/phpmd" : "@stable"
+  },
+  "autoload": {
+    "psr-4": {
+      "Codereview\\": ""
+    }
+  }
+}

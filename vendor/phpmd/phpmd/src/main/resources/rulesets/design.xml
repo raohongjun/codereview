@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+
+<ruleset name="设计规则"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+
+    <description>
+The Design Ruleset contains a collection of rules that find software design related problems.
+    </description>
+
+    <rule name="退出表达式"
+          since="0.2"
+          message = "{0} {1}() 包含一个exit表达式."
+          class="PHPMD\Rule\Design\ExitExpression"
+          externalInfoUrl="http://phpmd.org/rules/design.html#exitexpression">
+        <description>
+            <![CDATA[
+            常规代码中的退出表达式是不可测试的，因此应该这样做
+            应避免。 考虑将exit-expression移到某种启动
+            脚本将错误/异常代码返回给调用环境。
+            ]]>
+        </description>
+        <priority>1</priority>
+        <properties />
+        <example>
+            <![CDATA[
+                class Foo {
+                    public function bar($param)  {
+                        if ($param === 42) {
+                            exit(23);
+                        }
+                    }
+                }
+            ]]>
+        </example>
+    </rule>
+
+    <rule name="评估表达"
+          since="0.2"
+          message = "{0} {1}() 包含一个eval表达式."
+          class="PHPMD\Rule\Design\EvalExpression"
+          externalInfoUrl="http://phpmd.org/rules/design.html#evalexpression">
+        <description>
+            <![CDATA[
+            评估表达式是不可测试的，安全风险和不良做法。 因此
+            应该避免。 考虑用常规替换eval-expression
+            码。
+            ]]>
+        </description>
+        <priority>1</priority>
+        <properties />
+        <example>
+            <![CDATA[
+                class Foo {
+                    public function bar($param)  {
+                        if ($param === 42) {
+                            eval('$param = 23;');
+                        }
+                    }
+                }
+            ]]>
+        </example>
+    </rule>
+
+    <rule name="GotoStatement"
+          since="1.1.0"
+          message="{0} {1}() 使用goto语句."
+          class="PHPMD\Rule\Design\GotoStatement"
+          externalInfoUrl="http://phpmd.org/rules/design.html#gotostatement">
+        <description>
+            <![CDATA[
+            转到使代码难以阅读，这是几乎不可能理解的
+            控制使用此语言结构的应用程序的流程。 所以呢
+            应该避免。 考虑用定期的控制结构来替换Goto
+            单独的方法/功能，它们更易于阅读。
+            ]]>
+        </description>
+        <priority>1</priority>
+        <properties />
+        <example>
+            <![CDATA[
+                class Foo {
+                    public function bar($param)  {
+                        A:
+                        if ($param === 42) {
+                            goto X;
+                        }
+                        Y:
+                        if (time() % 42 === 23) {
+                            goto Z;
+                        }
+                        X:
+                        if (time() % 23 === 42) {
+                            goto Y;
+                        }
+                        Z:
+                        return 42;
+                    }
+                }
+            ]]>
+        </example>
+    </rule>
+
+    <rule name="子类数量"
+          since="0.2"
+          message = "{0} {1} 有 {2} 个子类. 考虑重新平衡此类层次结构，以保留 {3}下的子项数."
+          class="PHPMD\Rule\Design\NumberOfChildren"
+          externalInfoUrl="http://phpmd.org/rules/design.html#numberofchildren">
+        <description>
+            <![CDATA[
+            一个子类数量过多的父类是一个不平衡的指标
+            类层次结构。 你应该考虑重构这个类的层次结构。
+            ]]>
+        </description>
+        <priority>2</priority>
+        <properties>
+            <property name="minimum" value="15" description="Maximum number of acceptable child classes." />
+        </properties>
+        <example />
+    </rule>
+
+    <rule name="继承深度"
+          since="0.2"
+          message = "{0} {1} 有 {2} 父类. 考虑将此类层次的深度降至 {3}以下."
+          class="PHPMD\Rule\Design\DepthOfInheritance"
+          externalInfoUrl="http://phpmd.org/rules/design.html#depthofinheritance">
+        <description>
+            <![CDATA[
+                有许多父母的班级是班级失衡和错误的指标
+                层次结构。 你应该考虑重构这个类的层次结构。
+            ]]>
+        </description>
+        <priority>2</priority>
+        <properties>
+            <property name="minimum" value="6" description="Maximum number of acceptable parent classes." />
+        </properties>
+        <example />
+    </rule>
+
+    <rule name="对象之间的耦合"
+          since="1.1.0"
+          message="类 {0} 的对象值为 {1}. 考虑减少 {2} 下的依赖项数量."
+          class="PHPMD\Rule\Design\CouplingBetweenObjects"
+          externalInfoUrl="http://phpmd.org/rules/design.html#couplingbetweenobjects">
+        <description>
+            <![CDATA[
+                具有太多依赖性的课对几种质量有负面影响
+                一类的方面。 这包括质量标准如稳定性，
+                可维护性和可理解性
+            ]]>
+        </description>
+        <priority>2</priority>
+        <properties>
+            <property name="minimum" value="13" description="Maximum number of acceptable dependencies." />
+        </properties>
+        <example>
+            <![CDATA[
+                class Foo {
+                    /**
+                     * @var \foo\bar\X
+                     */
+                    private $x = null;
+
+                    /**
+                     * @var \foo\bar\Y
+                     */
+                    private $y = null;
+
+                    /**
+                     * @var \foo\bar\Z
+                     */
+                    private $z = null;
+
+                    public function setFoo(\Foo $foo) {}
+                    public function setBar(\Bar $bar) {}
+                    public function setBaz(\Baz $baz) {}
+
+                    /**
+                     * @return \SplObjectStorage
+                     * @throws \OutOfRangeException
+                     * @throws \InvalidArgumentException
+                     * @throws \ErrorException
+                     */
+                    public function process(\Iterator $it) {}
+
+                    // ...
+                }
+            ]]>
+        </example>
+    </rule>
+
+    <rule name="开发代码片段"
+          since="2.3.0"
+          message="{0} {1}() 调用通常仅在开发期间使用的典型调试函数 {2}()."
+          class="PHPMD\Rule\Design\DevelopmentCodeFragment"
+          externalInfoUrl="http://phpmd.org/rules/design.html#developmentcodefragment">
+        <description>
+            <![CDATA[
+            像var_dump（），print_r（）等函数通常只在开发过程中使用
+            因此生产代码中的这种调用是一个很好的指标
+            只是忘记了。
+            ]]>
+        </description>
+        <priority>2</priority>
+        <properties>
+            <property name="unwanted-functions" value="var_dump,print_r,debug_zval_dump,debug_print_backtrace" description="Comma separated list of suspect function images." />
+        </properties>
+        <example>
+            <![CDATA[
+                class SuspectCode {
+
+                    public function doSomething(array $items)
+                    {
+                        foreach ($items as $i => $item) {
+                            // …
+
+                            if ('qafoo' == $item) var_dump($i);
+
+                            // …
+                        }
+                    }
+                }
+            ]]>
+        </example>
+    </rule>
+</ruleset>
