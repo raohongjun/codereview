@@ -45,11 +45,8 @@ use PHPMD\Node\ASTNode;
 
 /**
  * This is an abstract base class for PHPMD code nodes, it is just a wrapper
- * around PDepend's object model.
- *
- * @author Manuel Pichler <mapi@phpmd.org>
- * @copyright 2008-2017 Manuel Pichler. All rights reserved.
- * @license http://www.opensource.org/licenses/bsd-license.php BSD License
+ * 抽象基类
+ * 围绕PDepend的对象模型
  */
 abstract class AbstractNode
 {
@@ -60,7 +57,7 @@ abstract class AbstractNode
     private $node = null;
 
     /**
-     * The collected metrics for this node.
+     * 收集的此节点的度量标准。
      *
      * @var array(string=>mixed) $_metrics
      */
@@ -77,8 +74,8 @@ abstract class AbstractNode
     }
 
     /**
-     * The magic call method is used to pipe requests from rules direct
-     * to the underlying PDepend ast node.
+     * 魔术方法用于直接管理来自规则的请求
+     * 到底层的PDepend ast节点。
      *
      * @param string $name
      * @param array $args
@@ -97,8 +94,8 @@ abstract class AbstractNode
     }
 
     /**
-     * Returns the parent of this node or <b>null</b> when no parent node
-     * exists.
+     * 没有父节点时，返回此节点的父节点或<b> null </ b>
+     * 存在。
      *
      * @return ASTNode
      */
@@ -111,7 +108,7 @@ abstract class AbstractNode
     }
 
     /**
-     * Returns a child node at the given index.
+     * 返回给定索引处的子节点。
      *
      * @param integer $index The child offset.
      *
@@ -126,8 +123,8 @@ abstract class AbstractNode
     }
 
     /**
-     * Returns the first child of the given type or <b>null</b> when this node
-     * has no child of the given type.
+     * 返回此节点的给定类型的第一个子元素或<b> null </ b>
+     * 没有给定类型的孩子。
      *
      * @param string $type The searched child type.
      * @return \PHPMD\AbstractNode
@@ -142,8 +139,7 @@ abstract class AbstractNode
     }
 
     /**
-     * Searches recursive for all children of this node that are of the given
-     * type.
+     * 搜索此节点的给定子节点的所有子节点的递归类型
      *
      * @param string $type The searched child type.
      * @return \PHPMD\AbstractNode[]
@@ -160,7 +156,7 @@ abstract class AbstractNode
     }
 
     /**
-     * Tests if this node represents the the given type.
+     * 测试此节点是否表示给定的类型。
      *
      * @param string $type The expected node type.
      * @return boolean
@@ -172,8 +168,7 @@ abstract class AbstractNode
     }
 
     /**
-     * Returns the image of the underlying node.
-     *
+     * 返回底层节点的图像。
      * @return string
      */
     public function getImage()
@@ -182,8 +177,8 @@ abstract class AbstractNode
     }
 
     /**
-     * Returns the source name for this node, maybe a class or interface name,
-     * or a package, method, function name.
+     * 返回此节点的源名称，可能是类或接口名称，
+     * 或包，方法，函数名称
      *
      * @return string
      */
@@ -193,7 +188,7 @@ abstract class AbstractNode
     }
 
     /**
-     * Returns the begin line for this node in the php source code file.
+     * 返回php源代码文件中此节点的开始行。
      *
      * @return integer
      */
@@ -203,7 +198,7 @@ abstract class AbstractNode
     }
 
     /**
-     * Returns the end line for this node in the php source code file.
+     * 返回php源代码文件中此节点的结束行。
      *
      * @return integer
      */
@@ -213,7 +208,7 @@ abstract class AbstractNode
     }
 
     /**
-     * Returns the name of the declaring source file.
+     * 返回声明源文件的名称。
      *
      * @return string
      */
@@ -223,7 +218,7 @@ abstract class AbstractNode
     }
 
     /**
-     * Returns the wrapped PDepend node instance.
+     * 返回包装的PDepend节点实例。
      *
      * @return \PDepend\Source\AST\ASTArtifact
      */
@@ -233,7 +228,7 @@ abstract class AbstractNode
     }
 
     /**
-     * Returns a textual representation/name for the concrete node type.
+     * 返回具体节点类型的文本表示/名称。
      *
      * @return string
      */
@@ -244,7 +239,7 @@ abstract class AbstractNode
     }
 
     /**
-     * This method will return the metric value for the given identifier or
+     * 此方法将返回给定标识符的度量值
      * <b>null</b> when no such metric exists.
      *
      * @param string $name The metric name or abbreviation.
@@ -253,6 +248,7 @@ abstract class AbstractNode
      */
     public function getMetric($name)
     {
+
         if (isset($this->metrics[$name])) {
             return $this->metrics[$name];
         }
@@ -260,7 +256,7 @@ abstract class AbstractNode
     }
 
     /**
-     * This method will set the metrics for this node.
+     * 该方法将为此节点设置度量标准
      *
      * @param array(string=>mixed) $metrics The collected node metrics.
      * @return void

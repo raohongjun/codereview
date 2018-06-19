@@ -1,36 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<ruleset name="代码大小规则"
+<ruleset name="代码量大小规则"
          xmlns="http://pmd.sf.net/ruleset/1.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
          xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
 
     <description>
-        代码大小规则集包含一组查找代码大小相关问题的规则
+        代码量大小规则集包含一组查找代码大小相关问题的规则
     </description>
 
     <rule name="循环复杂度"
           since="0.1"
-          message="{0} {1}() 的循环复杂度为 {2}.  配置的圈复杂度阈值为 {3}."
+          message="{0} {1}() 的循环复杂度为 {2}.  配置的循环复杂度参考值为 {3}."
           class="PHPMD\Rule\CyclomaticComplexity"
           externalInfoUrl="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity">
         <description>
             <![CDATA[
-            复杂性由一个方法中的决策点的数量加上一个决定
-            方法条目。 决定点是'if', 'while', 'for'和'case labels'。 通常，
-            1-4为低复杂度，5-7为中等复杂度，8-10为高复杂度，
-              和11+是非常复杂的。
+            复杂性由一个方法中的决策点的数量加上一个决定方法条目。 决定点是'if', 'while', 'for'和'case labels'。 通常，
+            1-4为低复杂度，5-7为中等复杂度，8-10为高复杂度，和11+是非常复杂的。
             ]]>
         </description>
         <priority>3</priority>
         <properties>
-            <property name="reportLevel" description="The Cyclomatic Complexity reporting threshold" value="10"/>
+            <property name="reportLevel" description="Cyclomatic复杂性报告参考值" value="10"/>
             <property name="showClassesComplexity"
-                      description="Indicate if class average violation should be added to the report"
+                      description="指出是否应在报告中添加类平均违规"
                       value="true"/>
             <property name="showMethodsComplexity"
-                      description="Indicate if class average violation should be added to the report"
+                      description="指出是否应在报告中添加类平均违规"
                       value="true"/>
         </properties>
         <example>
@@ -79,16 +77,16 @@
 
     <rule name="NPath的复杂性"
           since="0.1"
-          message="{0} {1}()的NPath复杂度为 {2}. 配置的NPath复杂度阈值为{3}."
+          message="{0} {1}()的NPath复杂度为 {2}. 配置的NPath复杂度参考值为{3}."
           class="PHPMD\Rule\Design\NpathComplexity"
           externalInfoUrl="http://phpmd.org/rules/codesize.html#npathcomplexity">
         <description>
             方法的NPath复杂度是通过该方法的非循环执行路径的数量。
-            通常认为200的阈值是应采取措施降低复杂性的关键。
+            通常认为200的参考值是应采取措施降低复杂性的关键。
         </description>
         <priority>3</priority>
         <properties>
-            <property name="minimum" description="The npath reporting threshold" value="200"/>
+            <property name="minimum" description="npath报告参考值" value="200"/>
         </properties>
         <example>
             <![CDATA[
@@ -104,7 +102,7 @@
 
     <rule name="方法长度"
           since="0.1"
-          message="{0} {1}() 包含 {2} 行代码. 当前阈值设置为 {3}. 避免真正长的方法."
+          message="{0} {1}() 包含 {2} 行代码. 当前参考值设置为 {3}. 避免真正长的方法."
           class="PHPMD\Rule\Design\LongMethod"
           externalInfoUrl="http://phpmd.org/rules/codesize.html#excessivemethodlength">
         <description>
@@ -113,8 +111,8 @@
         </description>
         <priority>3</priority>
         <properties>
-            <property name="minimum" description="The method size reporting threshold" value="100"/>
-            <property name="ignore-whitespace" description="Count whitespace in reporting threshold" value="false"/>
+            <property name="minimum" description="方法大小报告参考值" value="100"/>
+            <property name="ignore-whitespace" description="在报告参考值中计算空白" value="false"/>
         </properties>
         <example>
             <![CDATA[
@@ -122,16 +120,16 @@
                     public function doSomething() {
                         print("Hello world!" . PHP_EOL);
                         print("Hello world!" . PHP_EOL);
-                        // 98 copies omitted for brevity.
+                        // 98 为简洁起见，省略复制.
                     }
                 }
             ]]>
         </example>
     </rule>
 
-    <rule name="ExcessiveClassLength"
+    <rule name="类长度过长"
           since="0.1"
-          message="class {0} 包含 {1} 行代码. 当前阈值是 {2}. 避免很长 classes."
+          message="class {0} 包含 {1} 行代码. 当前参考值是 {2}. 避免很长 classes."
           class="PHPMD\Rule\Design\LongClass"
           externalInfoUrl="http://phpmd.org/rules/codesize.html#excessiveclasslength">
         <description>
@@ -141,8 +139,8 @@
         </description>
         <priority>3</priority>
         <properties>
-            <property name="minimum" description="The class size reporting threshold" value="1000"/>
-            <property name="ignore-whitespace" description="Count whitespace in reporting threshold" value="false"/>
+            <property name="minimum" description="类大小报告参考值" value="1000"/>
+            <property name="ignore-whitespace" description="在报告参考值中计算空白" value="false"/>
         </properties>
         <example>
             <![CDATA[
@@ -167,7 +165,7 @@
         </description>
         <priority>3</priority>
         <properties>
-            <property name="minimum" description="The parameter count reporting threshold" value="10"/>
+            <property name="minimum" description="参数计数报告参考值" value="10"/>
         </properties>
         <example>
             <![CDATA[
@@ -194,7 +192,7 @@
         </description>
         <priority>3</priority>
         <properties>
-            <property name="minimum" description="The public item reporting threshold" value="45"/>
+            <property name="minimum" description="公共属性报告参考值" value="45"/>
         </properties>
         <example>
             <![CDATA[
@@ -226,7 +224,7 @@
         </description>
         <priority>3</priority>
         <properties>
-            <property name="maxfields" description="The field count reporting threshold " value="15"/>
+            <property name="maxfields" description="当前类文件字段报告参考值 " value="15"/>
         </properties>
         <example>
             <![CDATA[
@@ -255,8 +253,8 @@
         </description>
         <priority>3</priority>
         <properties>
-            <property name="maxmethods" description="当前规则设置的阈值" value="25"/>
-            <property name="ignorepattern" description="Ignore methods matching this regex" value="(^(set|get))i"/>
+            <property name="maxmethods" description="当前规则设置的参考值" value="25"/>
+            <property name="ignorepattern" description="忽略匹配这个正则表达式的方法" value="(^(set|get))i"/>
         </properties>
     </rule>
 
@@ -269,13 +267,12 @@
             <![CDATA[
                 一个拥有太多公共方法的类可能是重构的好怀疑者，
                 为了减少其复杂性并找到一种方法来获得更细粒度的对象。
-
                 默认情况下，它忽略以'get'或'set'开头的方法。
             ]]>
         </description>
         <priority>3</priority>
         <properties>
-            <property name="maxmethods" description="当前规则设置的阈值" value="10"/>
+            <property name="maxmethods" description="当前规则设置的参考值" value="10"/>
             <property name="ignorepattern" description="忽略匹配这个正则表达式的方法" value="(^(set|get))i"/>
         </properties>
     </rule>
@@ -283,11 +280,11 @@
     <rule name="过度的类复杂性"
           since="0.2.5"
           class="PHPMD\Rule\Design\WeightedMethodCount"
-          message="class {0} 的整体复杂度非常高 {1} 配置的复杂度阈值为 {2}."
+          message="class {0} 的整体复杂度非常高 {1} 配置的复杂度参考值为 {2}."
           externalInfoUrl="http://phpmd.org/rules/codesize.html#excessiveclasscomplexity">
         <description>
             <![CDATA[
-            一个班级的加权方法计数（WMC）是多少时间的一个很好的指标
+            一个类的加权方法计数（WMC）是多少时间的一个很好的指标
             并且需要努力修改和维护这个类。 WMC指标已定义
             作为一个类中声明的所有方法的复杂性的总和。 大批
             方法也意味着这个类对派生类有更大的潜在影响。
@@ -295,7 +292,7 @@
         </description>
         <priority>3</priority>
         <properties>
-            <property name="maximum" description="The maximum WMC tolerable for a class." value="50"/>
+            <property name="maximum" description="一个类可容忍的最大WMC." value="50"/>
         </properties>
         <example>
             <![CDATA[
@@ -320,7 +317,7 @@
                             }
                         }
                     }
-                    // Several other complex methods
+                    // 其他几种复杂的方法
                 }
             ]]>
         </example>

@@ -56,15 +56,15 @@ use PDepend\Source\AST\ASTMethod;
 use PDepend\Source\Tokenizer\Tokens;
 
 /**
- * This analyzer collects different lines of code metrics.
+ * 此分析器收集不同的代码度量标准。
  *
- * It collects the total Lines Of Code(<b>loc</b>), the None Comment Lines Of
- * Code(<b>ncloc</b>), the Comment Lines Of Code(<b>cloc</b>) and a approximated
- * Executable Lines Of Code(<b>eloc</b>) for files, classes, interfaces,
- * methods, properties and function.
+ * 它收集总代码行数（<loc> </ b>），无注释行数
+ * 代码（<b> ncloc </ b>），代码的注释行（<b> cloc </ b>）和近似值
+ * 可执行的代码行（<b> eloc </ b>）用于文件，类，接口，
+ * 方法，属性和功能。
  *
- * The current implementation has a limitation, that affects inline comments.
- * The following code will suppress one line of code.
+ * 目前的实施有一个限制，会影响内嵌评论。
+ * 以下代码将禁止一行代码。
  *
  * <code>
  * function foo() {
@@ -72,7 +72,7 @@ use PDepend\Source\Tokenizer\Tokens;
  * }
  * </code>
  *
- * The same rule applies to class methods. mapi, <b>PLEASE, FIX THIS ISSUE.</b>
+ * 相同的规则适用于类方法。</ b>. mapi, <b>PLEASE, FIX THIS ISSUE.</b>
  *
  * @copyright 2008-2017 Manuel Pichler. All rights reserved.
  * @license http://www.opensource.org/licenses/bsd-license.php BSD License
@@ -83,7 +83,7 @@ class NodeLocAnalyzer extends AbstractCachingAnalyzer implements
     AnalyzerProjectAware
 {
     /**
-     * Metrics provided by the analyzer implementation.
+     * 分析器实现提供的度量。
      */
     const M_LINES_OF_CODE             = 'loc',
           M_COMMENT_LINES_OF_CODE     = 'cloc',
@@ -92,7 +92,7 @@ class NodeLocAnalyzer extends AbstractCachingAnalyzer implements
           M_NON_COMMENT_LINES_OF_CODE = 'ncloc';
 
     /**
-     * Collected project metrics.
+     * 收集项目指标。
      *
      * @var array(string=>integer)
      */
@@ -105,8 +105,8 @@ class NodeLocAnalyzer extends AbstractCachingAnalyzer implements
     );
 
     /**
-     * Executable lines of code in a class. The method calculation increases
-     * this property with each method's ELOC value.
+     * 类中的可执行代码行。 方法计算增加
+     * 这个属性与每个方法的ELOC值。
      *
      * @var   integer
      * @since 0.9.12
@@ -114,8 +114,8 @@ class NodeLocAnalyzer extends AbstractCachingAnalyzer implements
     private $classExecutableLines = 0;
 
     /**
-     * Logical lines of code in a class. The method calculation increases this
-     * property with each method's LLOC value.
+     * 类中的逻辑代码行。 方法计算增加了这一点s
+     * 每种方法的LLOC值。
      *
      * @var   integer
      * @since 0.9.13

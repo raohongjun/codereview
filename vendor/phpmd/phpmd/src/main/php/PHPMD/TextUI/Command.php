@@ -89,6 +89,7 @@ class Command
 
         // 创建渲染器并配置输出
         $renderer = $opts->createRenderer();
+        //返回关联的输出写入器实例。
         $renderer->setWriter(new StreamWriter($stream));
 
         $renderers = array($renderer);
@@ -98,9 +99,9 @@ class Command
             $reportRenderer->setWriter(new StreamWriter(fopen($reportFile, 'wb')));
             $renderers[] = $reportRenderer;
         }
-
-        // 配置规则集工厂
+        // 设置规则优先级
         $ruleSetFactory->setMinimumPriority($opts->getMinimumPriority());
+
         if ($opts->hasStrict()) {
             $ruleSetFactory->setStrict();
         }
@@ -121,6 +122,7 @@ class Command
         }
 
         $ignore = $opts->getIgnore();
+
         if ($ignore !== null) {
             $phpmd->setIgnorePattern(explode(',', $ignore));
         }
@@ -167,6 +169,7 @@ class Command
     {
         try {
             $ruleSetFactory = new RuleSetFactory();
+            //构造一个新的命令行选项实例。
             $options = new CommandLineOptions($args, $ruleSetFactory->listAvailableRuleSets());
             $command = new Command();
             $exitCode = $command->run($options, $ruleSetFactory);

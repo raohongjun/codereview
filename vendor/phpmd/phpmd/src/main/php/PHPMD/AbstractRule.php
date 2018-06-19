@@ -401,7 +401,7 @@ abstract class AbstractRule implements Rule
             $search[]  = '{' . $index . '}';
             $replace[] = $value;
         }
-
+        //替换字符串中的一些字符
         $message = str_replace($search, $replace, $this->message);
         $ruleViolation = new RuleViolation($this, $node, $message, $metric);
         $this->report->addRuleViolation($ruleViolation);

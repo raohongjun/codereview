@@ -46,7 +46,7 @@
         <properties>
             <property
                     name="allow-unused-foreach-variables"
-                    description="Allow unused variables in foreach language constructs."
+                    description="允许在foreach语言结构中使用未使用的变量。"
                     value="false" />
         </properties>
         <example>

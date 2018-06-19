@@ -10,9 +10,9 @@
         该规则集包含一系列有争议的规则。
     </description>
 
-    <rule name="Superglobals"
+    <rule name="超级全局变量"
           since="0.2"
-          message = "{0} accesses the super-global variable {1}."
+          message = "{0} 访问超级全局变量 {1}."
           class="PHPMD\Rule\Controversial\Superglobals"
           externalInfoUrl="#">
         <description>
@@ -34,17 +34,17 @@
         </example>
     </rule>
 
-    <rule name="CamelCaseClassName"
+    <rule name="驼峰类名称"
           since="0.2"
-          message = "The class {0} is not named in CamelCase."
+          message = "class {0} 没有使用驼峰命名法."
           class="PHPMD\Rule\Controversial\CamelCaseClassName"
           externalInfoUrl="#">
         <description>
             <![CDATA[
-                使用CamelCase符号命名类被认为是最佳实践。
+                使用驼峰命名法来命名的类被认为是最佳方式。
             ]]>
         </description>
-        <priority>1</priority>
+        <priority>5</priority>
         <properties />
         <example>
             <![CDATA[
@@ -54,23 +54,23 @@
         </example>
     </rule>
 
-    <rule name="CamelCasePropertyName"
+    <rule name="骆驼属性名称"
           since="0.2"
-          message = "The property {0} is not named in camelCase."
+          message = "属性 {0} 没有使用驼峰命名法."
           class="PHPMD\Rule\Controversial\CamelCasePropertyName"
           externalInfoUrl="#">
         <description>
             <![CDATA[
-                使用camelCase符号来命名属性被认为是最佳实践。
+                使用驼峰命名法来命名的属性被认为是最佳方式。
             ]]>
         </description>
-        <priority>1</priority>
+        <priority>5</priority>
         <properties>
             <property name="allow-underscore"
-                      description="Allow an optional, single underscore at the beginning."
+                      description="允许在开始时选择一个可选的下划线。"
                       value="false" />
             <property name="allow-underscore-test"
-                      description="Is it allowed to have underscores in test method names."
+                      description="允许在测试方法名称中有下划线。"
                       value="false" />
         </properties>
         <example>
@@ -84,44 +84,45 @@
 
     <rule name="CamelCaseMethodName"
           since="0.2"
-          message = "The method {0} is not named in camelCase."
+          message = "方法 {0} 没有使用驼峰命名法."
           class="PHPMD\Rule\Controversial\CamelCaseMethodName"
           externalInfoUrl="#">
         <description>
             <![CDATA[
-                使用camelCase符号来命名方法被认为是最佳实践。
+                使用驼峰命名法来命名的方法被认为是最佳方式。
             ]]>
         </description>
         <priority>1</priority>
         <properties>
             <property name="allow-underscore"
-                      description="Allow an optional, single underscore at the beginning."
+                      description="在开始时允许一个可选的单下划线."
                       value="false" />
             <property name="allow-underscore-test"
-                      description="Is it allowed to have underscores in test method names."
+                      description="是否允许在测试方法名称中使用下划线."
                       value="false" />
         </properties>
         <example>
             <![CDATA[
                 class ClassName {
                     public function get_name() {
+
                     }
                 }
             ]]>
         </example>
     </rule>
 
-    <rule name="CamelCaseParameterName"
+    <rule name="驼峰参数名"
           since="0.2"
-          message = "The parameter {0} is not named in camelCase."
+          message = "参数 {0} 没有使用驼峰命名法."
           class="PHPMD\Rule\Controversial\CamelCaseParameterName"
           externalInfoUrl="#">
         <description>
             <![CDATA[
-                使用camelCase表示法来命名参数被认为是最佳实践。
+                使用驼峰命名法来命名的形参被认为是最佳方式。
             ]]>
         </description>
-        <priority>1</priority>
+        <priority>5</priority>
         <properties />
         <example>
             <![CDATA[
@@ -133,17 +134,17 @@
         </example>
     </rule>
 
-    <rule name="CamelCaseVariableName"
+    <rule name="驼峰变量"
           since="0.2"
-          message = "The variable {0} is not named in camelCase."
+          message = "变量 {0} 没有使用驼峰命名法."
           class="PHPMD\Rule\Controversial\CamelCaseVariableName"
           externalInfoUrl="#">
         <description>
             <![CDATA[
-                使用camelCase符号来命名变量被认为是最佳实践。
+                使用驼峰命名法来命名的变量被认为是最佳方式。
             ]]>
         </description>
-        <priority>1</priority>
+        <priority>5</priority>
         <properties />
         <example>
             <![CDATA[

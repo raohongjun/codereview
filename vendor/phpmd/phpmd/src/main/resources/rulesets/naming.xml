@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ruleset name="命名规则"
+<ruleset name="命名长短规则"
          xmlns="http://pmd.sf.net/ruleset/1.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
@@ -10,7 +10,7 @@
 
     <rule name="短变量"
           since="0.2"
-          message="Avoid variables with short names like {0}. Configured minimum length is {1}."
+          message="避免使用像 {0}. 这样的短名称的变量。 配置的最小长度是 {1}."
           class="PHPMD\Rule\Naming\ShortVariable"
           externalInfoUrl="http://phpmd.org/rules/naming.html#shortvariable">
         <description>
@@ -18,8 +18,8 @@ Detects when a field, local, or parameter has a very short name.
         </description>
         <priority>3</priority>
         <properties>
-            <property name="minimum" description="Minimum length for a variable, property or parameter name" value="3"/>
-            <property name="exceptions" description="Comma-separated list of exceptions" value=""/>
+            <property name="minimum" description="变量，属性或参数名称的最小长度" value="3"/>
+            <property name="exceptions" description="用逗号分隔的例外列表" value=""/>
         </properties>
         <example>
             <![CDATA[
@@ -46,7 +46,7 @@ Detects when a field, local, or parameter has a very short name.
         </description>
         <priority>3</priority>
         <properties>
-            <property name="maximum" description="The variable length reporting threshold" value="20"/>
+            <property name="maximum" description="可变长度参考值" value="20"/>
         </properties>
         <example>
             <![CDATA[
@@ -74,8 +74,8 @@ Detects when a field, local, or parameter has a very short name.
         </description>
         <priority>3</priority>
         <properties>
-            <property name="minimum" description="Minimum length for a method or function name" value="3"/>
-            <property name="exceptions" description="Comma-separated list of exceptions" value=""/>
+            <property name="minimum" description="方法或函数名称的最小长度" value="3"/>
+            <property name="exceptions" description="" value="用逗号分隔的例外列表"/>
         </properties>
         <example>
             <![CDATA[
@@ -87,7 +87,7 @@ Detects when a field, local, or parameter has a very short name.
         </example>
     </rule>
 
-    <rule name="名称为EnclosingClass的构造函数"
+    <rule name="相同名的构造函数"
           since="0.2"
           message="类不应该具有与类相同名称的构造方法"
           class="PHPMD\Rule\Naming\ConstructorWithNameAsEnclosingClass"
@@ -140,7 +140,7 @@ Detects when a field, local, or parameter has a very short name.
         </description>
         <priority>4</priority>
         <properties>
-            <property name="checkParameterizedMethods" value="false" description="Applies only to methods without parameter when set to true" />
+            <property name="checkParameterizedMethods" value="false" description="设置为true时，仅适用于不带参数的方法" />
         </properties>
         <example>
             <![CDATA[

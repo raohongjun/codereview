@@ -43,10 +43,8 @@
         <description>
             <![CDATA[
                 带有else分支的if表达式是不必要的。 你可以重写
-                条件以其他方式不必要，代码变得更简单
-                读书。 为了实现这个使用早期返回语句。 为了实现这一点，你可以
-                需要将代码拆分成几个更小的方法。 非常简单的作业
-                你也可以使用三元操作。
+                条件以其他方式不必要，代码变得更简单易读。 为了实现这个使用早期返回语句。 为了实现这一点，你可以
+                需要将代码拆分成几个更小的方法。 非常简单的操作你也可以使用三元操作。
             ]]>
         </description>
         <priority>1</priority>
@@ -82,7 +80,7 @@
         </description>
         <priority>1</priority>
         <properties>
-            <property name="exceptions" description="Comma-separated class name list of exceptions" value=""/>
+            <property name="exceptions" description="例外的逗号分隔类名列表" value=""/>
         </properties>
         <example>
             <![CDATA[

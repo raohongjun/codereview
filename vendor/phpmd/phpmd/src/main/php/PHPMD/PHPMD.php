@@ -203,8 +203,7 @@ class PHPMD
         array $renderers,
         RuleSetFactory $ruleSetFactory
     ) {
-
-        // 合并解析排除
+        // 合并解析排除文件和目录
         $this->ignorePatterns = array_merge($this->ignorePatterns, $ruleSetFactory->getIgnorePattern($ruleSets));
 
         $this->input = $inputPath;
@@ -225,7 +224,7 @@ class PHPMD
         foreach ($renderers as $renderer) {
             $renderer->start();
         }
-        
+
         foreach ($renderers as $renderer) {
             $renderer->renderReport($report);
         }

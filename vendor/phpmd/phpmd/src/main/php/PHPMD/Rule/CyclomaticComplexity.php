@@ -45,7 +45,7 @@ use PHPMD\AbstractNode;
 use PHPMD\AbstractRule;
 
 /**
- * This rule checks a given method or function against the configured cyclomatic
+ * 该规则针对配置的循环检查给定的方法或功能
  * complexity threshold.
  *
  * @author Manuel Pichler <mapi@phpmd.org>
@@ -55,7 +55,7 @@ use PHPMD\AbstractRule;
 class CyclomaticComplexity extends AbstractRule implements FunctionAware, MethodAware
 {
     /**
-     * This method checks the cyclomatic complexity for the given node against
+     * 该方法针对给定节点检查循环复杂度
      * a configured threshold.
      *
      * @param \PHPMD\AbstractNode $node
@@ -63,7 +63,9 @@ class CyclomaticComplexity extends AbstractRule implements FunctionAware, Method
      */
     public function apply(AbstractNode $node)
     {
+        //设定值
         $threshold = $this->getIntProperty('reportLevel');
+        //评分值
         $ccn = $node->getMetric('ccn2');
         if ($ccn < $threshold) {
             return;

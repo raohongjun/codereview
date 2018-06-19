@@ -110,7 +110,7 @@ class Parser extends AbstractASTVisitor implements CodeAwareGenerator
     }
 
     /**
-     * Parses the projects source and reports all detected errors and violations.
+     * 解析项目源并报告检测到的所有错误和违规行为。
      *
      * @param \PHPMD\Report $report
      * @return void
@@ -290,7 +290,7 @@ class Parser extends AbstractASTVisitor implements CodeAwareGenerator
     }
 
     /**
-     * Collects the collected metrics for the given node and adds them to the
+     * 收集给定节点的收集指标并将其添加到指定节点
      * <b>$node</b>.
      *
      * @param \PHPMD\AbstractNode $node
@@ -299,7 +299,6 @@ class Parser extends AbstractASTVisitor implements CodeAwareGenerator
     private function collectMetrics(AbstractNode $node)
     {
         $metrics = array();
-
         $pdepend = $node->getNode();
         foreach ($this->analyzers as $analyzer) {
             $metrics = array_merge($metrics, $analyzer->getNodeMetrics($pdepend));

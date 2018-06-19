@@ -64,12 +64,12 @@ class HTMLRenderer extends AbstractRenderer
     {
         $writer = $this->getWriter();
 
-        $writer->write('<html><head><title>PHP代码报告</title></head><body>');
+        $writer->write('<html><head><meta charset="utf-8"><title>PHP代码报告</title></head><body>');
         $writer->write(PHP_EOL);
         $writer->write('<center><h1>PHP代码报告</h1></center>');
         $writer->write('<center><h2>找到的问题</h2></center>');
         $writer->write(PHP_EOL);
-        $writer->write('<table align="center" cellspacing="0" cellpadding="3">');
+        $writer->write('<table  border="1" align="center" cellspacing="0" cellpadding="3">' );
         $writer->write('<tr>');
         $writer->write('<th>序号</th><th>文件名</th><th>行位置</th><th>问题描述</th>');
         $writer->write('</tr>');
@@ -97,16 +97,18 @@ class HTMLRenderer extends AbstractRenderer
             $writer->write(PHP_EOL);
 
             $writer->write('<td align="center">');
+            //序号
             $writer->write($index);
             $writer->write('</td>');
             $writer->write(PHP_EOL);
-
             $writer->write('<td>');
+            //文件名
             $writer->write(htmlentities($violation->getFileName()));
             $writer->write('</td>');
             $writer->write(PHP_EOL);
 
             $writer->write('<td align="center" width="5%">');
+            //代码行号
             $writer->write($violation->getBeginLine());
             $writer->write('</td>');
             $writer->write(PHP_EOL);
@@ -118,7 +120,7 @@ class HTMLRenderer extends AbstractRenderer
 //                $writer->write($violation->getRule()->getExternalInfoUrl());
 //                $writer->write('">');
 //            }
-
+            //问题描述
             $writer->write(htmlentities($violation->getDescription()));
             if ($violation->getRule()->getExternalInfoUrl()) {
                 $writer->write('</a>');
@@ -137,7 +139,7 @@ class HTMLRenderer extends AbstractRenderer
     }
 
     /**
-     * This method will be called the engine has finished the report processing
+     * 此方法将被称为引擎已完成报告处理
      * for all registered renderers.
      *
      * @return void
@@ -149,7 +151,7 @@ class HTMLRenderer extends AbstractRenderer
     }
 
     /**
-     * This method will render a html table with occurred processing errors.
+     * 此方法将呈现出现处理错误的html表格。
      *
      * @param \PHPMD\Report $report
      * @return void

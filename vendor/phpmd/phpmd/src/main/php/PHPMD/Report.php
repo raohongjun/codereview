@@ -113,7 +113,7 @@ class Report
     }
 
     /**
-     * Returns an iterator with all occurred rule violations.
+     * 返回包含所有发生的规则违规的迭代器。
      *
      * @return \PHPMD\RuleViolation[]
      */

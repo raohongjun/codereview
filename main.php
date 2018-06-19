@@ -1,4 +1,5 @@
 <?php
+#!/usr/bin/env php
 /**
  * Created by PhpStorm.
  * User: raohongjun
@@ -7,40 +8,50 @@
  */
 
 include __DIR__."/vendor/autoload.php";
-#!/usr/bin/env php
 use PHPMD\TextUI\Command;
+
 $gitdata=[
-    "医生患者服务平台"=>"/Users/raohongjun/PhpstormProjects/dpserviceplatform",//医生患者服务平台
-    "福瑞医生管理后台"=>"/Users/raohongjun/PhpstormProjects/agAppConsole",//福瑞医生管理后台
-    "福瑞医生会员端"=>"/Users/raohongjun/PhpstormProjects/h5NewSystem",//福瑞医生会员端
-    "福瑞海外医疗小程序服务层"=>"/Users/raohongjun/PhpstormProjects/appletsService",//福瑞海外医疗小程序服务层
-    "问医生小程序"=>"/Users/raohongjun/PhpstormProjects/wxapp-wys",//问医生小程序
-    "问医生小程序测试"=>"/Users/raohongjun/PhpstormProjects/wxapp-wys-test",//问医生小程序测试
-    "权限服务"=>"/Users/raohongjun/PhpstormProjects/permissionService",//权限服务
-    "日志服务"=>"/Users/raohongjun/PhpstormProjects/aglogsService",//日志服务
-    "用户中心服务"=>"/Users/raohongjun/PhpstormProjects/userCenterService",//用户中心服务
-    "脚本服务"=>"/Users/raohongjun/PhpstormProjects/scriptServices",//脚本服务
-    "消息服务层"=>"/Users/raohongjun/PhpstormProjects/messageService",//消息服务层
-    "统计服务层"=>"/Users/raohongjun/PhpstormProjects/statisticsService",//统计服务层
-    "知识库服务层"=>"/Users/raohongjun/PhpstormProjects/loreService",//知识库服务层
-    "搜索服务层"=>"/Users/raohongjun/PhpstormProjects/searchService",//搜索服务层
-    "订单服务层"=>"/Users/raohongjun/PhpstormProjects/orderService",//订单服务层
-    "OCR服务层"=>"/Users/raohongjun/PhpstormProjects/ocrService",//OCR服务层
-    "核心服务层（关）"=>"/Users/raohongjun/PhpstormProjects/coreServices",//核心服务层（关）
-    "肝病联盟管理后台"=>"/Users/raohongjun/PhpstormProjects/businessAdmin",//肝病联盟管理后台
-    "肝病联盟公众号"=>"/Users/raohongjun/PhpstormProjects/h5UninSystem",//肝病联盟公众号
-    "福瑞海外医疗小程序"=>"/Users/raohongjun/PhpstormProjects/wxapp_hwyl",//福瑞海外医疗小程序
-    "302患者端demo"=>"/Users/raohongjun/PhpstormProjects/patientDemo",//302患者端demo
+    "医生患者服务平台"=>__DIR__."/../dpserviceplatform",//医生患者服务平台
+    "福瑞医生管理后台"=>__DIR__."/../agAppConsole",//福瑞医生管理后台
+    "福瑞医生会员端"=>__DIR__."/../h5NewSystem",//福瑞医生会员端
+    "福瑞海外医疗小程序服务层"=>__DIR__."/../appletsService",//福瑞海外医疗小程序服务层
+    "问医生小程序"=>__DIR__."/../wxapp-wys",//问医生小程序
+    "问医生小程序测试"=>__DIR__."/../wxapp-wys-test",//问医生小程序测试
+    "权限服务"=>__DIR__."/../permissionService",//权限服务
+    "日志服务"=>__DIR__."/../aglogsService",//日志服务
+    "用户中心服务"=>__DIR__."/../userCenterService",//用户中心服务
+    "脚本服务"=>__DIR__."/../scriptServices",//脚本服务
+    "消息服务层"=>__DIR__."/../messageService",//消息服务层
+    "统计服务层"=>__DIR__."/../statisticsService",//统计服务层
+    "知识库服务层"=>__DIR__."/../loreService",//知识库服务层
+    "搜索服务层"=>__DIR__."/../searchService",//搜索服务层
+    "订单服务层"=>__DIR__."/../orderService",//订单服务层
+    "OCR服务层"=>__DIR__."/../ocrService",//OCR服务层
+    "核心服务层（关）"=>__DIR__."/../coreServices",//核心服务层（关）
+    "肝病联盟管理后台"=>__DIR__."/../businessAdmin",//肝病联盟管理后台
+    "肝病联盟公众号"=>__DIR__."/../h5UninSystem",//肝病联盟公众号
+    "福瑞海外医疗小程序"=>__DIR__."/../wxapp_hwyl",//福瑞海外医疗小程序
+    "302患者端demo"=>__DIR__."/../patientDemo",//302患者端demo
+    "通讯服务"=>__DIR__."/../imservice",//302患者端demo
 ];
+
 foreach ($gitdata as $k=>$v) {
     $git = new \Codereview\gitCount($v);
     $git->addExcludePath([
         "vendor/*",
         "thinkphp/*",
-        "tests/*"
+        "tests/*",
+        "storage/*",
+        "lang/*",
+        "migrations/*",
+        "assets/*",
+        "migrations"
     ]);
     $git->addExcludeFileName([
-        "composer"
+        "composer",
+        "artisan",
+        "Handler",
+        "helper"
     ]);
     //拉取更新
     $git->runCommand( "cd " . $v . "&& git pull" );
@@ -67,7 +78,7 @@ foreach ($gitdata as $k=>$v) {
         '--exclude',
         'vendor/,Tests/,oss-sdk-php/,thinkphp/,tests/'
     ];
-    // 运行命令行界面
+    // 代码分析
     Command::main($conf);
     echo $k;
 }

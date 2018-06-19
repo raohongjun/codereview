@@ -7,6 +7,7 @@
  */
 
 namespace Codereview;
+use Codereview\command;
 class gitCount
 {
 

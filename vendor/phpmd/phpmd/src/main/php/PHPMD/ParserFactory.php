@@ -74,7 +74,6 @@ class ParserFactory
     {
         $pdepend = $this->createInstance();
         $pdepend = $this->init($pdepend, $phpmd);
-
         return new Parser($pdepend);
     }
 

@@ -142,7 +142,7 @@ class RuleViolation
     }
 
     /**
-     * Returns the description/message text that describes the violation.
+     * 返回描述违规的描述/消息文本。
      *
      * @return string
      */
@@ -162,7 +162,7 @@ class RuleViolation
     }
 
     /**
-     * Returns the file name where this rule violation was detected.
+     * 返回检测到此规则违例的文件名。
      *
      * @return string
      */
@@ -172,7 +172,7 @@ class RuleViolation
     }
 
     /**
-     * Returns the first line of the node that causes this rule violation.
+     * 返回导致此规则违反的节点的第一行。
      *
      * @return integer
      */

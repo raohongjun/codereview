@@ -255,8 +255,8 @@ class CommandLineOptions
     }
 
     /**
-     * Returns a hash with report files specified for different renderers. The
-     * key represents the report format and the value the report file location.
+     * 返回包含为不同渲染器指定的报告文件的哈希。该
+     * 键表示报告格式和报告文件位置的值。
      *
      * @return array
      */
