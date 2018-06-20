@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9489b917-2d28-41ae-9d73-24f50fb44527" name="codereview" url="http://111.202.112.123">
+        <fileTransfer host="111.202.112.123" port="22334" privateKey="$USER_HOME$/.ssh/id_rsa" rootFolder="/home/raohongjun/works/gitclone/codereview" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22334" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -11,58 +11,23 @@ $id = 1;
     <script src="js/echarts.js"></script>
     <script src="js/jquery.min.js"></script>
     <style>
-        body {
-            padding-bottom: 100px;
-        }
+        body {  padding-bottom: 100px;  }
 
-        .boxItem {
-            float: left;
-        }
+        .boxItem {  float: left;  }
 
-        .clearfix:after {
-            content: "";
-            display: block;
-            clear: both;
-        }
+        .clearfix:after {  content: "";  display: block;  clear: both;  }
 
-        .boxItem div {
-            position: relative !important;
-            top: 0 !important;
-            left: 0 !important;
-        }
+        .boxItem div {  position: relative !important;  top: 0 !important;  left: 0 !important;  }
 
-        .boxItem .titItem {
-            text-align: center;
-            font-size: 36px;
-        }
+        .boxItem .titItem {  text-align: center;  font-size: 36px;  }
 
-        .boxItem div canvas {
-            position: relative !important;
-            top: 0 !important;
-            left: 0 !important;
-        }
+        .boxItem div canvas {  position: relative !important;  top: 0 !important;  left: 0 !important;  }
 
-        .boxtititem {
-            padding: 30px 0;
-            margin-bottom: 30px;
-        }
+        .boxtititem {  padding: 30px 0;  margin-bottom: 30px;  }
 
-        .boxtititem a {
-            display: block;
-            float: left;
-            width: 80px;
-            line-height: 40px;
-            background: cornflowerblue;
-            color: #fff;
-            margin-left: 12px;
-            text-align: center;
-            border-radius: 5px;
-            text-decoration: none;
-        }
+        .boxtititem a {  display: block;  float: left;  width: 80px;  line-height: 40px;  background: cornflowerblue;  color: #fff;  margin-left: 12px;  text-align: center;  border-radius: 5px;  text-decoration: none;  }
 
-        .boxtititem a.on, .boxtititem a:hover {
-            background: palevioletred;
-        }
+        .boxtititem a.on, .boxtititem a:hover {  background: palevioletred;  }
     </style>
 </head>
 <body>
@@ -70,6 +35,7 @@ $id = 1;
     <a href="index.php">总</a>
     <a href="month.php" class="on">月</a>
     <a href="day.php">日</a>
+    <a href="weekSummary.php">周总结</a>
 </div>
  <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
 <div class="clearfix ItemBoxAll">

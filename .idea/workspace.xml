@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bccfd496-042c-4ca0-b206-3c6180ea7817" name="默认的" comment="提交">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codereview.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/weekSummary.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command.php" afterPath="$PROJECT_DIR$/command.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpmd/phpmd/src/bin/phpmd.bat" afterPath="$PROJECT_DIR$/vendor/phpmd/phpmd/src/bin/phpmd.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/Renderer/HTMLRenderer.php" afterPath="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/Renderer/HTMLRenderer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/resources/rulesets/design.xml" afterPath="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/resources/rulesets/design.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/day.php" afterPath="$PROJECT_DIR$/views/day.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.php" afterPath="$PROJECT_DIR$/views/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/month.php" afterPath="$PROJECT_DIR$/views/month.php" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true">
+    <executablePath>composer</executablePath>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="81" column="11" lean-forward="false" selection-start-line="81" selection-start-column="11" selection-end-line="81" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="weekSummary.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/weekSummary.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-80">
+              <caret line="19" column="73" lean-forward="true" selection-start-line="19" selection-start-column="73" selection-end-line="19" selection-end-column="73" />
+              <folding>
+                <marker date="1529481610069" expanded="true" signature="390:1967" ph="..." />
+                <marker date="1529481610069" expanded="true" signature="397:926" ph="..." />
+                <marker date="1529481610069" expanded="true" signature="463:918" ph="..." />
+                <marker date="1529481610069" expanded="true" signature="933:1959" ph="..." />
+                <marker date="1529481610069" expanded="true" signature="967:1111" ph="..." />
+                <marker date="1529481610069" expanded="true" signature="1214:1951" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HTMLRenderer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/Renderer/HTMLRenderer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="697">
+              <caret line="79" column="13" lean-forward="true" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
+              <folding>
+                <element signature="e#1886#1913#0#PHP" expanded="true" />
+                <marker date="1529465419134" expanded="true" signature="4026:4116" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/data.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1326">
+              <caret line="78" column="15" lean-forward="false" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="15" />
+              <folding>
+                <marker date="1529458316044" expanded="true" signature="89:112" ph="..." />
+                <marker date="1529458316044" expanded="true" signature="2165:2175" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="511">
+              <caret line="52" column="82" lean-forward="false" selection-start-line="52" selection-start-column="77" selection-end-line="52" selection-end-column="82" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="command.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/command.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>The method count reporting threshold</find>
+      <find>The</find>
+      <find>print_</find>
+      <find>message</find>
+      <find>的循环复杂度为</find>
+      <find>{2}</find>
+      <find>lightgrey</find>
+      <find>$PROJECT_DIR$/..</find>
+      <find>../gitclone</find>
+      <find>PHPMD</find>
+      <find>phpmd</find>
+      <find>description</find>
+      <find>&quot;/home/raohongjun/works/gitclone</find>
+      <find>CDATA</find>
+      <find>阈值</find>
+      <find>圈</find>
+      <find>property</find>
+      <find>minimum</find>
+      <find>loc</find>
+      <find>apply</find>
+      <find>addViolation</find>
+      <find>setMetrics</find>
+      <find>ncloc</find>
+      <find>LC_CTYPE</find>
+      <find>inputPath</find>
+      <find>CommandLineOption</find>
+      <find>getNamespaceName</find>
+      <find>setWriter</find>
+      <find>folder</find>
+      <find>fan3750060</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>当前规则设置的阈值</replace>
+      <replace>../gitclone</replace>
+      <replace>/home/raohongjun/works/gitclone</replace>
+      <replace>PHPCR</replace>
+      <replace>__DIR__.&quot;/..</replace>
+      <replace>参考值</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/vendor/bin</dir>
+      <dir>$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD</dir>
+      <dir>$PROJECT_DIR$/</dir>
+      <dir>$PROJECT_DIR$/phpmd</dir>
+      <dir>$PROJECT_DIR$/phpCR/phpCR</dir>
+      <dir>$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/resources/rulesets</dir>
+      <dir>$PROJECT_DIR$/vendor/phpmd</dir>
+      <dir>$PROJECT_DIR$/vendor/phpmd/phpmd</dir>
+      <dir>$PROJECT_DIR$/vendor</dir>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/phpmd/phpmd/src/main/php/PHPMD/AbstractRenderer.php" />
+        <option value="$PROJECT_DIR$/phpmd/phpmd/src/main/php/PHPMD/AbstractRule.php" />
+        <option value="$PROJECT_DIR$/phpmd/phpmd/src/main/php/PHPMD/AbstractWriter.php" />
+        <option value="$PROJECT_DIR$/phpmd/phpmd/src/main/php/PHPMD/Node/ASTNode.php" />
+        <option value="$PROJECT_DIR$/phpmd/phpmd/src/main/php/PHPMD/Node/AbstractCallableNode.php" />
+        <option value="$PROJECT_DIR$/phpmd/phpmd/src/main/php/PHPMD/Node/AbstractNode.php" />
+        <option value="$PROJECT_DIR$/phpmd/phpmd/src/main/php/PHPMD/Node/AbstractTypeNode.php" />
+        <option value="$PROJECT_DIR$/phpmd/phpmd/src/main/php/PHPMD/Node/Annotation.php" />
+        <option value="$PROJECT_DIR$/phpmd/phpmd/src/main/php/PHPMD/Node/Annotations.php" />
+        <option value="$PROJECT_DIR$/phpmd/phpmd/src/main/php/PHPMD/Node/ClassNode.php" />
+        <option value="$PROJECT_DIR$/phpmd/phpmd/src/main/php/PHPMD/Node/FunctionNode.php" />
+        <option value="$PROJECT_DIR$/phpmd/phpmd/src/main/php/PHPMD/Node/InterfaceNode.php" />
+        <option value="$PROJECT_DIR$/phpmd/phpmd/src/main/php/PHPMD/Node/MethodNode.php" />
+        <option value="$PROJECT_DIR$/phpmd/phpmd/src/main/php/PHPMD/Node/TraitNode.php" />
+        <option value="$PROJECT_DIR$/phpmd/phpmd/src/main/php/PHPMD/PHPMD.php" />
+        <option value="$PROJECT_DIR$/phpmd/phpmd/src/main/php/PHPMD/Parser.php" />
+        <option value="$PROJECT_DIR$/phpmd/phpmd/src/main/php/PHPMD/ParserFactory.php" />
+        <option value="$PROJECT_DIR$/phpmd/phpmd/src/main/php/PHPMD/ProcessingError.php" />
+        <option value="$PROJECT_DIR$/phpmd/phpmd/src/main/php/PHPMD/Renderer/HTMLRenderer.php" />
+        <option value="$PROJECT_DIR$/phpmd/phpmd/src/main/php/PHPMD/Renderer/TextRenderer.php" />
+        <option value="$PROJECT_DIR$/phpmd/phpmd/src/main/php/PHPMD/Renderer/XMLRenderer.php" />
+        <option value="$PROJECT_DIR$/phpmd/phpmd/src/main/php/PHPMD/Report.php" />
+        <option value="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/resources/rulesets/cleancode.xml" />
+        <option value="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/PHPMD.php" />
+        <option value="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/ParserFactory.php" />
+        <option value="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/resources/rulesets/codesize.xml" />
+        <option value="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/resources/rulesets/controversial.xml" />
+        <option value="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/resources/rulesets/unusedcode.xml" />
+        <option value="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/resources/rulesets/naming.xml" />
+        <option value="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/Report.php" />
+        <option value="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/RuleSetFactory.php" />
+        <option value="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/RuleViolation.php" />
+        <option value="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/AbstractRule.php" />
+        <option value="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/Rule/CyclomaticComplexity.php" />
+        <option value="$PROJECT_DIR$/vendor/pdepend/pdepend/src/main/php/PDepend/Metrics/AnalyzerNodeAware.php" />
+        <option value="$PROJECT_DIR$/vendor/pdepend/pdepend/src/main/php/PDepend/Metrics/Analyzer/NodeLocAnalyzer.php" />
+        <option value="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/Parser.php" />
+        <option value="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/AbstractNode.php" />
+        <option value="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/TextUI/CommandLineOptions.php" />
+        <option value="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/TextUI/Command.php" />
+        <option value="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/AbstractRenderer.php" />
+        <option value="$PROJECT_DIR$/main.php" />
+        <option value="$PROJECT_DIR$/views/static/医生患者服务平台.html" />
+        <option value="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/Renderer/HTMLRenderer.php" />
+        <option value="$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/resources/rulesets/design.xml" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/views/index.php" />
+        <option value="$PROJECT_DIR$/views/month.php" />
+        <option value="$PROJECT_DIR$/views/day.php" />
+        <option value="$PROJECT_DIR$/command.php" />
+        <option value="$PROJECT_DIR$/views/weekSummary.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1440" />
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="codereview" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codereview" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/views" />
+      <recent name="$PROJECT_DIR$/js" />
+      <recent name="$PROJECT_DIR$/gitOperate" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bccfd496-042c-4ca0-b206-3c6180ea7817" name="默认的" comment="" />
+      <created>1528429077067</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1528429077067</updated>
+      <workItem from="1528429078250" duration="30000" />
+      <workItem from="1528429123280" duration="14593000" />
+      <workItem from="1528680851576" duration="1184000" />
+      <workItem from="1528683055835" duration="72603000" />
+      <workItem from="1528954826027" duration="6349000" />
+      <workItem from="1529025806548" duration="5080000" />
+      <workItem from="1529033020081" duration="5992000" />
+      <workItem from="1529047022724" duration="274000" />
+      <workItem from="1529049088149" duration="41000" />
+      <workItem from="1529049243215" duration="17000" />
+      <workItem from="1529051398303" duration="579000" />
+      <workItem from="1529372336781" duration="14257000" />
+      <workItem from="1529474117108" duration="7347000" />
+    </task>
+    <task id="LOCAL-00001" summary="提交">
+      <created>1528880694392</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1528880694392</updated>
+    </task>
+    <task id="LOCAL-00002" summary="修改文件">
+      <created>1528881312394</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1528881312394</updated>
+    </task>
+    <task id="LOCAL-00003" summary="修改文件">
+      <created>1528883667345</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1528883667345</updated>
+    </task>
+    <task id="LOCAL-00004" summary="修改注释">
+      <created>1529386009695</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1529386009695</updated>
+    </task>
+    <task id="LOCAL-00005" summary="提交">
+      <created>1529465359324</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1529465359324</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="128346000" />
+  </component>
+  <component name="TodoView" selected-index="2">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1440" y="23" width="1920" height="1057" extended-state="0" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19275825" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.49713877" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2920228" sideWeight="0.50858366" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17879418" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25751072" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3170478" sideWeight="0.4914163" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改文件" />
+    <MESSAGE value="修改注释" />
+    <MESSAGE value="提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/SPL/SPL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="2115" column="0" lean-forward="true" selection-start-line="2115" selection-start-column="0" selection-end-line="2115" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/Report.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-807">
+          <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/AbstractRule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="330" column="15" lean-forward="false" selection-start-line="330" selection-start-column="15" selection-end-line="330" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/RuleSetFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="390" column="0" lean-forward="true" selection-start-line="390" selection-start-column="0" selection-end-line="390" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_4.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-335">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/pdepend/pdepend/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/pdepend/pdepend/src/main/php/PDepend/Source/Tokenizer/Tokens.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10132">
+          <caret line="635" column="10" lean-forward="false" selection-start-line="635" selection-start-column="10" selection-end-line="635" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/Rule/Design/WeightedMethodCount.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="69" column="28" lean-forward="false" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/pdepend/pdepend/src/main/php/PDepend/Metrics/Analyzer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="52" column="10" lean-forward="false" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/pdepend/pdepend/src/main/php/PDepend/Metrics/AnalyzerNodeAware.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="52" column="42" lean-forward="false" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/Parser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="116" column="7" lean-forward="false" selection-start-line="116" selection-start-column="7" selection-end-line="116" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/Rule/CyclomaticComplexity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="68" column="28" lean-forward="false" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/pdepend/pdepend/src/main/php/PDepend/Metrics/Analyzer/NodeLocAnalyzer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6443">
+          <caret line="429" column="13" lean-forward="false" selection-start-line="429" selection-start-column="13" selection-end-line="429" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bin/phpmd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-484">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/resources/rulesets/cleancode.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="37" column="20" lean-forward="false" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/resources/rulesets/naming.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="131" column="25" lean-forward="true" selection-start-line="131" selection-start-column="25" selection-end-line="131" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/pdepend/pdepend/src/main/php/PDepend/Engine.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="229" column="20" lean-forward="false" selection-start-line="229" selection-start-column="20" selection-end-line="229" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/ParserFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="127" column="30" lean-forward="false" selection-start-line="127" selection-start-column="30" selection-end-line="127" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/resources/rulesets/codesize.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="80" column="28" lean-forward="false" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/Renderer/TextRenderer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="44" column="17" lean-forward="true" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.txt" />
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/PHPMD.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="199" column="20" lean-forward="false" selection-start-line="199" selection-start-column="20" selection-end-line="199" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/resources/rulesets/unusedcode.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="72" column="17" lean-forward="false" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/RuleViolation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="170" column="36" lean-forward="false" selection-start-line="170" selection-start-column="36" selection-end-line="170" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/AbstractNode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="217" column="5" lean-forward="false" selection-start-line="217" selection-start-column="5" selection-end-line="217" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/TextUI/CommandLineOptions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="227" column="64" lean-forward="false" selection-start-line="227" selection-start-column="30" selection-end-line="227" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/AbstractRenderer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="98" column="5" lean-forward="false" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/Writer/StreamWriter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-343">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/AbstractWriter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="49" column="3" lean-forward="true" selection-start-line="49" selection-start-column="3" selection-end-line="49" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/static/医生患者服务平台.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/resources/rulesets/design.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="791">
+          <caret line="164" column="38" lean-forward="true" selection-start-line="164" selection-start-column="38" selection-end-line="164" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/resources/rulesets/controversial.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="17" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="31" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeReview.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/TextUI/Command.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2193">
+          <caret line="169" column="27" lean-forward="false" selection-start-line="169" selection-start-column="27" selection-end-line="169" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/static/302患者端demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/static/OCR服务层.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-660">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/static/搜索服务层.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/static/权限服务.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-910">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gitCount.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/static/脚本服务.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="74" column="26" lean-forward="true" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/month.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="37" column="37" lean-forward="false" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/command.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/day.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="37" lean-forward="false" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="52" column="82" lean-forward="false" selection-start-line="52" selection-start-column="77" selection-end-line="52" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="78" column="15" lean-forward="false" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="15" />
+          <folding>
+            <marker date="1529458316044" expanded="true" signature="89:112" ph="..." />
+            <marker date="1529458316044" expanded="true" signature="2165:2175" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="81" column="11" lean-forward="false" selection-start-line="81" selection-start-column="11" selection-end-line="81" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmd/phpmd/src/main/php/PHPMD/Renderer/HTMLRenderer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="79" column="13" lean-forward="true" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
+          <folding>
+            <element signature="e#1886#1913#0#PHP" expanded="true" />
+            <marker date="1529465419134" expanded="true" signature="4026:4116" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/weekSummary.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-80">
+          <caret line="19" column="73" lean-forward="true" selection-start-line="19" selection-start-column="73" selection-end-line="19" selection-end-column="73" />
+          <folding>
+            <marker date="1529481610069" expanded="true" signature="390:1967" ph="..." />
+            <marker date="1529481610069" expanded="true" signature="397:926" ph="..." />
+            <marker date="1529481610069" expanded="true" signature="463:918" ph="..." />
+            <marker date="1529481610069" expanded="true" signature="933:1959" ph="..." />
+            <marker date="1529481610069" expanded="true" signature="967:1111" ph="..." />
+            <marker date="1529481610069" expanded="true" signature="1214:1951" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -146,9 +146,7 @@ The Design Ruleset contains a collection of rules that find software design rela
           externalInfoUrl="http://phpmd.org/rules/design.html#couplingbetweenobjects">
         <description>
             <![CDATA[
-                具有太多依赖性的课对几种质量有负面影响
-                一类的方面。 这包括质量标准如稳定性，
-                可维护性和可理解性
+                具有太多依赖性的类对类的几个质量方面有负面影响。这包括稳定性，可维护性和可理解性等质量标准
             ]]>
         </description>
         <priority>2</priority>

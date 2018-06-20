@@ -66,8 +66,7 @@ class HTMLRenderer extends AbstractRenderer
 
         $writer->write('<html><head><meta charset="utf-8"><title>PHP代码报告</title></head><body>');
         $writer->write(PHP_EOL);
-        $writer->write('<center><h1>'.$this->folder.'项目报告</h1></center>');
-        $writer->write('<center><h2>找到的问题</h2></center>');
+        $writer->write('<center><h1>'.$this->folder.'项目分析报告</h1></center>');
         $writer->write(PHP_EOL);
         $writer->write('<table  border="1" align="center" cellspacing="0" cellpadding="3">' );
         $writer->write('<tr>');

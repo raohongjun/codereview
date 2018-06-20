@@ -12,11 +12,7 @@ $id=1;
     <style>
         body{padding-bottom:100px;}
         .boxItem{float:left;}
-        .clearfix:after {
-            content:"";
-            display: block;
-            clear:both;
-        }
+        .clearfix:after {  content:"";  display: block;  clear:both;  }
         .boxItem div{position: relative !important; top:0 !important;left:0 !important;}
         .boxItem .titItem{text-align: center; font-size:36px;}
         .boxItem div canvas{position: relative !important; top:0 !important;left:0 !important;}
@@ -31,6 +27,7 @@ $id=1;
     <a href="index.php" class="on">总</a>
     <a href="month.php">月</a>
     <a href="day.php">日</a>
+    <a href="weekSummary.php">周总结</a>
 </div>
  <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
 <div class="clearfix ItemBoxAll">
