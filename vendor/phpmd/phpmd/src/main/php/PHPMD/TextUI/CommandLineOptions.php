@@ -154,6 +154,12 @@ class CommandLineOptions
     protected $availableRuleSets = array();
 
     /**
+     * 文件夹名称
+     * @var mixed|string
+     */
+    public $folder='';
+
+    /**
      * 构造一个新的命令行选项实例。
      *
      * @param array $args
@@ -219,6 +225,7 @@ class CommandLineOptions
         }
 
         $this->inputPath    = (string) array_shift($arguments);
+        $this->folder       = end(explode('/',$this->inputPath));
         $this->reportFormat = (string) array_shift($arguments);
         $this->ruleSets     = (string) array_shift($arguments);
     }

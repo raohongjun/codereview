@@ -45,7 +45,6 @@ foreach ($gitdata as $k=>$v) {
         "lang/*",
         "migrations/*",
         "assets/*",
-        "migrations"
     ]);
     $git->addExcludeFileName([
         "composer",

@@ -43,7 +43,7 @@ namespace PHPMD\Renderer;
 
 use PHPMD\AbstractRenderer;
 use PHPMD\Report;
-
+use PHPMD\TextUI\Command;
 /**
  * This renderer output a simple html file with all found violations and suspect
  * software artifacts.
@@ -66,12 +66,12 @@ class HTMLRenderer extends AbstractRenderer
 
         $writer->write('<html><head><meta charset="utf-8"><title>PHP代码报告</title></head><body>');
         $writer->write(PHP_EOL);
-        $writer->write('<center><h1>PHP代码报告</h1></center>');
+        $writer->write('<center><h1>'.$this->folder.'项目报告</h1></center>');
         $writer->write('<center><h2>找到的问题</h2></center>');
         $writer->write(PHP_EOL);
         $writer->write('<table  border="1" align="center" cellspacing="0" cellpadding="3">' );
         $writer->write('<tr>');
-        $writer->write('<th>序号</th><th>文件名</th><th>行位置</th><th>问题描述</th>');
+        $writer->write('<th>序号</th><th>文件名</th><th>代码位置</th><th>所有者</th><th>问题描述</th>');
         $writer->write('</tr>');
         $writer->write(PHP_EOL);
     }
@@ -89,30 +89,38 @@ class HTMLRenderer extends AbstractRenderer
 
         $writer = $this->getWriter();
         foreach ($report->getRuleViolations() as $violation) {
+            $patharray=explode($this->folder,$violation->getFileName());
+            $path=current($patharray).$this->folder;
+            $filename='.'.end($patharray);
+            $match = $this->gitMassge($path, $filename, $violation);
+
             $writer->write('<tr');
             if (++$index % 2 === 1) {
                 $writer->write(' bgcolor="lightgrey"');
             }
             $writer->write('>');
             $writer->write(PHP_EOL);
-
-            $writer->write('<td align="center">');
             //序号
+            $writer->write('<td align="center">');
             $writer->write($index);
             $writer->write('</td>');
             $writer->write(PHP_EOL);
-            $writer->write('<td>');
             //文件名
-            $writer->write(htmlentities($violation->getFileName()));
+            $writer->write('<td>');
+            $writer->write(htmlentities($filename));
             $writer->write('</td>');
             $writer->write(PHP_EOL);
-
-            $writer->write('<td align="center" width="5%">');
             //代码行号
+            $writer->write('<td align="center" width="5%">');
             $writer->write($violation->getBeginLine());
             $writer->write('</td>');
             $writer->write(PHP_EOL);
-
+            //所有者
+            $writer->write('<td align="center" width="12%">');
+            $writer->write($match[0]);
+            $writer->write('</td>');
+            $writer->write(PHP_EOL);
+            //问题描述
             $writer->write('<td>');
             //添加跳转url
 //            if ($violation->getRule()->getExternalInfoUrl()) {
@@ -120,11 +128,10 @@ class HTMLRenderer extends AbstractRenderer
 //                $writer->write($violation->getRule()->getExternalInfoUrl());
 //                $writer->write('">');
 //            }
-            //问题描述
             $writer->write(htmlentities($violation->getDescription()));
-            if ($violation->getRule()->getExternalInfoUrl()) {
-                $writer->write('</a>');
-            }
+//            if ($violation->getRule()->getExternalInfoUrl()) {
+//                $writer->write('</a>');
+//            }
 
             $writer->write('</td>');
             $writer->write(PHP_EOL);
@@ -134,7 +141,6 @@ class HTMLRenderer extends AbstractRenderer
         }
 
         $writer->write('</table>');
-
         $this->glomProcessingErrors($report);
     }
 
@@ -183,5 +189,19 @@ class HTMLRenderer extends AbstractRenderer
         }
 
         $writer->write('</table>');
+    }
+
+    /**
+     * @param $path
+     * @param $filename
+     * @param $violation
+     * @return mixed
+     */
+    public function gitMassge($path, $filename, $violation)
+    {
+        $git = new \Codereview\gitCount($path);
+        $name = $git->runCommand('cd ' . $path . ' && git blame ' . $filename . '  -L  ' . $violation->getBeginLine() . ',' . $violation->getBeginLine());
+        preg_match("/\([\s\S].+?\)/", $name, $match);
+        return $match;
     }
 }

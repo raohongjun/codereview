@@ -57,6 +57,8 @@ abstract class AbstractRenderer
      */
     private $writer = null;
 
+    public  $folder = null;
+
     /**
      * Returns the associated output writer instance.
      *
@@ -76,6 +78,24 @@ abstract class AbstractRenderer
     public function setWriter(AbstractWriter $writer)
     {
         $this->writer = $writer;
+    }
+
+    /**
+     * 获取文件夹名
+     *
+     */
+    public function getFolder()
+    {
+        return $this->writer;
+    }
+
+    /**
+     * 设置文件夹名
+
+     */
+    public function setFolder($folder)
+    {
+        $this->folder = $folder;
     }
 
     /**

@@ -92,6 +92,8 @@ class Command
         //返回关联的输出写入器实例。
         $renderer->setWriter(new StreamWriter($stream));
 
+        $renderer->setFolder($opts->folder);
+
         $renderers = array($renderer);
 
         foreach ($opts->getReportFiles() as $reportFormat => $reportFile) {
