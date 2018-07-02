@@ -106,8 +106,7 @@
           class="PHPMD\Rule\Design\LongMethod"
           externalInfoUrl="http://phpmd.org/rules/codesize.html#excessivemethodlength">
         <description>
-            Violations of this rule usually indicate that the method is doing
-            too much. Try to reduce the method size by creating helper methods and removing any copy/pasted code.
+            违反此规则通常表明该方法冗余太多了。 尝试通过创建辅助方法和删除任何复制/粘贴代码来减小方法大小。
         </description>
         <priority>3</priority>
         <properties>
